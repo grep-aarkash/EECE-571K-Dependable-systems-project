@@ -1,0 +1,13 @@
+\section{Introduction}
+
+Fully automated self driving vehicles are poised to take the roads in near future, while partial self driving systems have been deployed and tested for over a billion miles~\cite{teslasr}, providing valuable sensor data that is used to improve the performance of self driving systems. The adoption of autonomous driving systems (ADS) on a large scale in real world is highly dependent on their reliability. Moreover, for the acceptance of deployment of such systems by wider public in such a safety critical application makes it necessary to understand the resilience profiles of autonomous driving systems, identify and improve weaknesses in current designs and exhaustively test these fixes to increase public confidence.
+
+% Add line above about what we gonna do
+ 
+Autonomous Driving System are composed of multiple sub-systems, the major parts being the sensor arrays and the control systems. A wide range of sensors like RGB cameras, radars, lidars, sonar, GPS etc. are used to provide information about the environment to the control system of ADS, which usually uses a Deep Neural Network to find the best course of action and gives commands to actuators, to control the movement of the vehicle. Such a highly integrated systems introduces various concerns about the overall reliability of such a system. Moreover as ADS are highly safety critical, regulations and standards impose stringent reliability requirements on their components. For example the SDC FIT rate (Failure-in-Time rate) for of SoC used for DNN inferencing specified by ISO-26262 is 10 i.e. ten failures in one billion hours of operation~\cite{guanpeng17sc}. These strict reliability requirements, demand that a reliability analysis be performed on complete integrated system and vulnerabilities or faults that can propagate, from one sub-system to the whole ADS be identified and mitigation techniques applied to make the system resilient to such faults.
+
+%Introduce Carla
+Studying the autonomous driving system is hindered by resource intensive nature of training and testing solutions in real world scenarios. Dosovitskiy et al.~\cite{carla18corl} recently introduced CARLA, which is an open source simulator for training and validating autonomous driving platforms. It provides an urban environment setting from which data is captured using a flexible array of sensors and signals that are normally present in ADS, this simulated data can then be used to train and test different sub-systems of an ADS. As CARLA also provides sensor reading in addition to images captured by camera, it can be used to study the effect of a vulnerability in a single component (for example the LIDAR sensor) on overall reliability of the whole ADS.
+
+%Here what we propose?
+
