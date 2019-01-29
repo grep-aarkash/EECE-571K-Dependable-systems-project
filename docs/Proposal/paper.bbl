@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{carla18corl}
+Alexey Dosovitskiy, German Ros, Felipe Codevilla, Antonio Lopez, and Vladlen
+  Koltun.
+\newblock {CARLA: An Open Urban Driving Simulator}.
+\newblock In {\em 1st Conference on Robot Learning (CoRL), 2018}, 2018.
+
+\bibitem{teslasr}
+Tesla Inc.
+\newblock Vehicle safety report ({Q4}-2018).
+\newblock \url{https://www.tesla.com/en_CA/VehicleSafetyReport}.
+
+\bibitem{jha18dsn}
+Saurabh Jha, Subho~S. Banerjee, James Cyriac, Zbigniew~T. Kalbarczyk, and
+  Ravishankar~K. Iyer.
+\newblock {CARLA: An Open Urban Driving Simulator}.
+\newblock In {\em International Conference on Dependable Systems and Networks
+  Workshops, 2018}. IEEE, 2018.
+
+\bibitem{jha18art}
+Saurabh Jha, Timothy Tsai, Siva Hari, Michael Sullivan, Zbigniew Kalbarczyk,
+  Stephen~W. Keckler, and Ravishankar~K. Iyer.
+\newblock {Kayotee: A Fault Injection-based System to Assess the Safety and
+  Reliability of Autonomous Vehicles to Faults and Errors}.
+\newblock In {\em International Workshop on Automotive Reliability and Test
+  (ART), 2018}. IEEE, 2018.
+
+\bibitem{guanpeng17sc}
+Guanpeng Li, Siva Kumar~Sastry Hari, Michael Sullivan, Timothy Tsai, Karthik
+  Pattabiraman, Jeol Emer, and Stephen Keckler.
+\newblock {Understanding Error Propagation in Deep Learning Neural Network
+  (DNN) Accelerators and Applications}.
+\newblock In {\em International Conference for High Performance Computing,
+  Networking, Storage, and Analysis (SC), 2017}. ACM, 2017.
+
+\bibitem{kexin17sosp}
+Kexin Pei, Yinzhi Cao, Junfeng Yang, and Suman Jana.
+\newblock {DeepXplore: Automated Whitebox Testing of Deep Learning Systems}.
+\newblock In {\em Symposium on Operating Systems Principles (SOSP), 2017},
+  pages 1--18. ACM, 2017.
+
+\end{thebibliography}
