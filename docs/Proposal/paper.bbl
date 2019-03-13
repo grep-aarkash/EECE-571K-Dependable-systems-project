@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{GPS}
+NVIDIA BLOG.
+\newblock Beyond gps: How hd maps will show self-driving cars the way.
+\newblock \url{https://blogs.nvidia.com/blog/2016/04/05/self-driving-cars-2/}.
+
 \bibitem{carla18corl}
 Alexey Dosovitskiy, German Ros, Felipe Codevilla, Antonio Lopez, and Vladlen
   Koltun.
