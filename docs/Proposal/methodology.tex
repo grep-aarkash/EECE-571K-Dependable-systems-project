@@ -22,7 +22,7 @@
 % Our contribution
 Our contribution is two-fold in this work. First, by an indepth understanding of autonomous vehicles, we device a fault model for the vehicle in general. We specifically focus on the sensor faults and design a fault-model specific to the sensors. Second, based on our fault model, we inject faults in order to obtain the failure rate of the system caused due to the sensor faults. We attempt fault injection in order to get maximum coverage of the system in an optimal manner.
 
-\subsection{Fault-model}
+\subsection{Fault-model for ADS}
 % general categorization of the fault-model
 Analysing the system, we designed a fault model for autonomous driving systems. We categorized the fault occurance in two ways: due to some physical damage or due to network issues. These two categories of faults cover almost all possible components of the systems which can lead to a failure of the system. 
 
@@ -30,5 +30,8 @@ Analysing the system, we designed a fault model for autonomous driving systems. 
 In Fig 1. we try to give a complete fault model of autonomous vehicles. However, covering the failures caused by each component is out of scope of our current paper. Also, analysing failure rates in general instead of component wise failure rates will not provide us with useful set of results. Hence we built a complete fault-model of the system initially. After building a comprehensive fault-model, based on our judgement, we decided to focus on one of the core set of components of ADS.
 
 %Core Components we selected for faults in ADS
- The core component we selected was sensors. However, every sensor used in ADS is very detailed oriented and performs multiple functionalities. 
+ The core component we selected were the  sensors used in ADS. However, every sensor used in ADS is very detailed oriented and performs multiple functionalities. So out of the four major sensors which we have explained in further details in Section 3, we focused on LIDAR. 
+ 
+ %A little more about LIDAR
+ LIDAR is a very expensive sensor and hence finding the failure rates of the system, caused due to LIDAR can helo the designers understand how to mitigate the faults such that they don't lead to failures. ADS being safety critical systems, can cause a lot of harm ( death in the worst case scenario ) in case of a failure. 
 
