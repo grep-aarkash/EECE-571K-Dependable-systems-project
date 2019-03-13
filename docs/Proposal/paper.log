@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAR 2019 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAR 2019 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -497,11 +497,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./abstract.tex) (./intro.tex) (./methodology.tex [1{/usr/local/texlive/2018/te
-xmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(./abstract.tex) (./intro.tex) (./related-work.tex [1{/usr/local/texlive/2018/t
+exmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
+]) (./Background.tex)
+(./methodology.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 9.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -511,8 +512,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-(./related-work.tex) (./paper.bbl)
+)) (./paper.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -526,10 +526,10 @@ Before submitting the final camera ready copy, remember to:
 
 [2] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 4485 strings out of 492649
- 64926 string characters out of 6129622
- 137255 words of memory out of 5000000
- 8283 multiletter control sequences out of 15000+600000
+ 4487 strings out of 492649
+ 64952 string characters out of 6129622
+ 139245 words of memory out of 5000000
+ 8282 multiletter control sequences out of 15000+600000
  40585 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,35p,1647b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -539,7 +539,7 @@ b></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
 cal/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (2 pages, 71149 bytes).
+Output written on paper.pdf (2 pages, 71276 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
