@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAR 2019 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAR 2019 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -504,7 +504,7 @@ Underfull \vbox (badness 2698) has occurred while \output is active []
 
 
 ])
-(./Background.tex) (./methodology.tex
+(./Background.tex) (./methodology.tex [2]
 LaTeX Font Info:    Try loading font information for U+msa on input line 9.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -515,7 +515,17 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) (./paper.bbl
-[2])
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+[]\OT1/ptm/m/n/8 MIT Tech-nol-ogy Re-view.  One cam-era is all this self-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+\OT1/ptm/m/n/8 driving car needs.  $https : / / www . technologyreview . com / 
+s / 539841 /
+ []
+
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -531,10 +541,10 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 4487 strings out of 492649
- 64952 string characters out of 6129622
- 140245 words of memory out of 5000000
- 8282 multiletter control sequences out of 15000+600000
+ 4488 strings out of 492649
+ 64966 string characters out of 6129622
+ 140248 words of memory out of 5000000
+ 8283 multiletter control sequences out of 15000+600000
  40585 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,35p,1647b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -544,7 +554,7 @@ c}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 l/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (3 pages, 73101 bytes).
+Output written on paper.pdf (3 pages, 74451 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream

@@ -40,4 +40,10 @@ Kexin Pei, Yinzhi Cao, Junfeng Yang, and Suman Jana.
 \newblock In {\em Symposium on Operating Systems Principles (SOSP), 2017},
   pages 1--18. ACM, 2017.
 
+\bibitem{singlecamera}
+MIT~Technology Review.
+\newblock One camera is all this self-driving car needs.
+\newblock
+  \url{https://www.technologyreview.com/s/539841/one-camera-is-all-this-self-driving-car-needs/}.
+
 \end{thebibliography}
