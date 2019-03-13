@@ -1,20 +1,20 @@
 \section{Approach}
 %Here what we propose?
 
-In this project, we intend to use attacks on ADS, to model faults activated in sensors and the communication channels present in an autonomous driving systems. We intend to study the effect of such fault activation (for example, corruption of reported sensor values, corruption of communication channel between sensor and the control system, unexpected activities in hardware controlling the sensor due to faults in control logic etc.) on the output of the entire ADS system.This is an unexplored area and the first step in this research involves formulating of attack models for individual sensors. These attack models will then be used to systematically inject faults in the system and then find vulnerable states in the system.
+%In this project, we intend to use attacks on ADS, to model faults activated in sensors and the communication channels present in an autonomous driving systems. We intend to study the effect of such fault activation (for example, corruption of reported sensor values, corruption of communication channel between sensor and the control system, unexpected activities in hardware controlling the sensor due to faults in control logic etc.) on the output of the entire ADS system.This is an unexplored area and the first step in this research involves formulating of attack models for individual sensors. These attack models will then be used to systematically inject faults in the system and then find vulnerable states in the system.
 
-We intend to compare the results of this systematic FI with to the existing fault injecting techniques and compare the performance and accuracy of these system by answering following questions. 
+%We intend to compare the results of this systematic FI with to the existing fault injecting techniques and compare the performance and accuracy of these system by answering following questions. 
 
-\begin{itemize}
-\item  Does employing systematic approach to FI increase the performance in comparison to fuzz testing?
+%\begin{itemize}
+%\item  Does employing systematic approach to FI increase the performance in comparison to fuzz testing?
 
-\item Does benefit obtained in terms of performance justify the effort required for developing systematic approaches for FI?
+%\item Does benefit obtained in terms of performance justify the effort required for developing systematic approaches for FI?
 
-\end{itemize}
+%\end{itemize}
 %The information collected using these individual attack models will then be used to find the vulnerabilities in the integrated ADS system. To detect and provide resilience against detected vulnerabilities, we will develop a model-based analysis framework, based on the dynamics of the ADS in order to test for any behavior not corresponding to system specifications.
 
 %We propose development of a systematic method to find vulnerabilities in components of an ADS, instead of using standard ad-hoc approaches~\cite{jha18dsn}~\cite{jha18art}, which don't provide good coverage for resilience assessment. The main objective of this project will be to develop a technique that can detect all vulnerabilities in sub-components that lead to degradation of reliability of whole system. This is an unexplored area and the first question in this research will be to find out, if this method is feasible. This involves formulating of fault models for individual components of an ADS. After development of fault models, individual components will be manually tested for vulnerabilities to test the validity of these fault models. This testing will be generalized and automated later by developing a tool that systematically finds all the vulnerabilities specified by the fault model of a component. The information collected using these individual fault models will then be used to find the vulnerabilities in the integrated ADS system and improve its resilience.
 
-CARLA will be used as a test platform for development and testing of our approach as it provides a convenient way to instrument and modify the readings of different sensors, as well as the behavior of driver agents that controls the autonomous vehicle. 
+%CARLA will be used as a test platform for development and testing of our approach as it provides a convenient way to instrument and modify the readings of different sensors, as well as the behavior of driver agents that controls the autonomous vehicle. 
 
 %Current approaches that analyze resilience of ADS systems on a holistic level perform fault injections to find vulnerabilities in the system which is quite resource intensive. Details about such approaches is provided in section \ref{related_work}. Our proposed methodology will forgo such ad hoc approaches and test different components of an ADS in a systematic way by modeling its behavior and using formal methods to validate its correctness and finding any unexpected behavior that introduces vulnerabilities in the ADS system. 
