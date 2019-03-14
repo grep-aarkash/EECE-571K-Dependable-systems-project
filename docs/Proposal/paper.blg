@@ -1,46 +1,48 @@
-This is BibTeX, Version 0.99d (TeX Live 2018)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
 The style file: plain.bst
 Database file #1: reference.bib
+Warning--I didn't find a database entry for "jha18dsn"
 You've used 8 entries,
             2118 wiz_defined-function locations,
-            657 strings with 9935 characters,
-and the built_in function-call counts, 2708 in all, are:
-= -- 240
+            662 strings with 10040 characters,
+and the built_in function-call counts, 2806 in all, are:
+= -- 250
 > -- 176
-< -- 1
+< -- 2
 + -- 70
 - -- 62
-* -- 170
-:= -- 466
-add.period$ -- 28
+* -- 177
+:= -- 474
+add.period$ -- 27
 call.type$ -- 8
 change.case$ -- 55
 chr.to.int$ -- 0
 cite$ -- 8
-duplicate$ -- 96
-empty$ -- 215
+duplicate$ -- 101
+empty$ -- 223
 format.name$ -- 62
-if$ -- 570
+if$ -- 594
 int.to.chr$ -- 0
 int.to.str$ -- 8
 missing$ -- 5
 newline$ -- 43
 num.names$ -- 16
-pop$ -- 86
+pop$ -- 85
 preamble$ -- 1
 purify$ -- 47
 quote$ -- 0
-skip$ -- 58
+skip$ -- 67
 stack$ -- 0
-substring$ -- 55
-swap$ -- 18
-text.length$ -- 1
+substring$ -- 74
+swap$ -- 23
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 32
 warning$ -- 0
-while$ -- 18
+while$ -- 21
 width$ -- 9
 write$ -- 84
+(There was 1 warning)

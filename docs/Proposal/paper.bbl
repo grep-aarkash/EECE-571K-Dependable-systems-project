@@ -5,23 +5,24 @@ NVIDIA BLOG.
 \newblock Beyond gps: How hd maps will show self-driving cars the way.
 \newblock \url{https://blogs.nvidia.com/blog/2016/04/05/self-driving-cars-2/}.
 
-\bibitem{carla18corl}
+\bibitem{Codevilla2018}
+Felipe Codevilla, Matthias M{\"u}ller, Antonio L{\'o}pez, Vladlen Koltun, and
+  Alexey Dosovitskiy.
+\newblock End-to-end driving via conditional imitation learning.
+\newblock In {\em International Conference on Robotics and Automation (ICRA)},
+  2018.
+
+\bibitem{Dosovitskiy17}
 Alexey Dosovitskiy, German Ros, Felipe Codevilla, Antonio Lopez, and Vladlen
   Koltun.
-\newblock {CARLA: An Open Urban Driving Simulator}.
-\newblock In {\em 1st Conference on Robot Learning (CoRL), 2018}, 2018.
+\newblock {CARLA}: {An} open urban driving simulator.
+\newblock In {\em Proceedings of the 1st Annual Conference on Robot Learning},
+  pages 1--16, 2017.
 
 \bibitem{teslasr}
 Tesla Inc.
 \newblock Vehicle safety report ({Q4}-2018).
 \newblock \url{https://www.tesla.com/en_CA/VehicleSafetyReport}.
-
-\bibitem{jha18dsn}
-Saurabh Jha, Subho~S. Banerjee, James Cyriac, Zbigniew~T. Kalbarczyk, and
-  Ravishankar~K. Iyer.
-\newblock {CARLA: An Open Urban Driving Simulator}.
-\newblock In {\em International Conference on Dependable Systems and Networks
-  Workshops, 2018}. IEEE, 2018.
 
 \bibitem{jha18art}
 Saurabh Jha, Timothy Tsai, Siva Hari, Michael Sullivan, Zbigniew Kalbarczyk,

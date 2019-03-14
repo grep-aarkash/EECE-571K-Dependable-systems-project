@@ -1,2 +1,30 @@
 \section{Research Implementation}
-%Abdul this is your section so check the subsections you are supposed to work on from our discussion notes.
+In this section we describe the architecture of of CARLA in detail and the present our fault injection methodology. 
+
+\subsection{CARLA}
+CARLA is an open source simulator built on Unreal Engine 4. CARLA provides simulation of realistic physics, NPC logic and dynamic world. CARLA simulates actions of an autonomous vehicle (AV) and the environment that this AV experiences, with ability to control the actions of the AV by an external driving agent,  that decides actions to be taken by AV, based on the data that it retrieves from simulation engine. Figure~\ref{fig:carla_arch} shows the high level architecture of CARLA. CARLA operates in a server-client model, with functionality between these divided in following manner.
+
+\begin{itemize}
+	\item Client: It runs the simulation and renders the environment that the AV experiences.
+	\item Server: It controls the parameters of the simulation and also controls the actions of the AV based on predefined algorithms. 
+	
+\end{itemize}
+
+\begin{figure}  [h]
+	\vspace{-0.5em}
+	\centering
+	\includegraphics[scale=0.33]{CARLA_block}
+	\vspace{-0.5em}
+	\caption{High level architecture of CARLA}
+	\label{fig:carla_arch}
+	\vspace{-1.5em}
+\end{figure}
+
+Due to this client-server architecture CARLA provides flexibility to swap multiple driving algorithms (called driving agents in CARLA terminology) and driving environments easily. The server provides the ability to render a range of environments by changing the weather, number of vehicles and pedestrians etc in the simulation environment. The server also provides the output of various sensors attached to AV to the driving agent. The client connects to the server using sockets and provides two type of inputs, commands and meta-commands, to the server. Commands control the behavior of the vehicles i.e braking, steering, accelerating etc. and are provided by the driving agent which is integrated with client side in CARLA using python APIs. Meta-commands are used to control the behavior of simulation.
+
+Although CARLA provides ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors present produce successful results for more than 90 percent trials. Following this information we primarily select the following environmental conditions for our experiments. 
+
+The ideal destination of vehicle is on the same line as the starting points with a distance of 200m and no dynamic objects are present in the simulation.
+
+\subsection{Driving Agent}
+As mentioned in the previous section the behavior of the vehicle in te simulation is controlled by the driving agent. As we want to study the resilience of CARLA, we have chosen an already developed driving agent, which uses conditional imitation learning to train a deep neural network~\cite{Codevilla2018}, which after offline training, is used for inferencing for taking decision during simulation. We take an already trained model and use that in our Fault injection phase. Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that success rate of the trained driving agent for the chosen environmental conditions is greater than 95\%.
