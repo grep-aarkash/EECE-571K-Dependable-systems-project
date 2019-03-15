@@ -24,6 +24,12 @@ Tesla Inc.
 \newblock Vehicle safety report ({Q4}-2018).
 \newblock \url{https://www.tesla.com/en_CA/VehicleSafetyReport}.
 
+\bibitem{avfi}
+Saurabh Jha, Subho S.~Banerjee, James Cyriac, Zbigniew T.~Kalbarczyk, and
+  Ravishankar Iyer.
+\newblock Avfi: Fault injection for autonomous vehicles.
+\newblock pages 55--56, 06 2018.
+
 \bibitem{jha18art}
 Saurabh Jha, Timothy Tsai, Siva Hari, Michael Sullivan, Zbigniew Kalbarczyk,
   Stephen~W. Keckler, and Ravishankar~K. Iyer.

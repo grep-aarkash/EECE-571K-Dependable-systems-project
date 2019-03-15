@@ -45,4 +45,24 @@ In Figure~\ref{fig:fault-model1} we try to give a complete fault model of autono
  
  %LIDAR fault model
  We will be providing the fault-model for ADS in our final report.
+ 
+\subsection{Fault Injection} \label{fi_m}
+In this section we describe the faults that we inject in sensor data according to our fault model and the effects of these faults. In our study we focus on two type of faults.
 
+\begin{itemize}
+	\item \textbf{Hardware faults:} These faults represent the soft errors that can occur in the data that is recorded by the sensors. These faults can occur in the registers of sensor units, in communication links between sensor and control unit and with in registers where these values are stored in the main ADS controller. Regardless of the location where the fault occurs, we assume that it is always activated and observed by the client when it reads the sensor data. This type of faults in real life can introduce single and multiple bit flips randomly in the sensor readings, which is modeled by our FI technique.
+	
+	\item \textbf{Data Faults:} These faults refers to the condition in which the sensors give a readings which are not correct according to the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the surroundings that are used in decision making process by the ADS (e.g. lane markings on road). For example, A LIDAR mapping its surrounded by laser can be effected by rainy weather such that the laser bouncing from the surrounding objects is effected by rainy weather thus the mapping produced by LIDAR is not representative of real environment.
+	
+\end{itemize}
+
+In our study with random Fault injection we study each fault separately, so for a set of related experiments we only inject one type of fault. Only one fault is injected in each execution run and its effect on the overall operation is observed. The goal and path to navigate is constant in each trial so that outcome of each trail can be compared with output of a golden run, in which no fault was injected. We use the following metrics to quantify the resilience of ADS which are inline with previous work in this domain~\cite{avfi}.
+
+\begin{itemize}
+	\item \textbf{Success percentage:} This metric represents the fraction of total trials in which the ADS was successful in achieving the specified target when faults are injected.
+	 
+	\item \textbf{Violations per trial:} This metric captures the traffic violations that occur during each trial. The violations that we consider for calculating this metric are lane violation and curb violations (reasons for not considering collisions with dynamic objects are explained in \ref{ri-carla}). 
+	
+\end{itemize}
+
+The two metrics used provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behavior, which may not lead to outright failure but violate safety properties.
