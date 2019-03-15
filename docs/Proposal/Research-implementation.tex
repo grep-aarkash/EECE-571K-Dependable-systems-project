@@ -4,11 +4,9 @@ In this section we describe the architecture of of CARLA in detail and the prese
 \subsection{CARLA} \label{ri-carla}
 CARLA is an open source simulator built on Unreal Engine 4. CARLA provides simulation of realistic physics, NPC logic and dynamic world. CARLA simulates actions of an autonomous vehicle (AV) and the environment that this AV experiences, with ability to control the actions of the AV by an external driving agent,  that decides actions to be taken by AV, based on the data that it retrieves from simulation engine. Figure~\ref{fig:carla_arch} shows the high level architecture of CARLA. CARLA operates in a server-client model, with functionality between these divided in following manner.
 
-\begin{itemize}
-	\item Client: It runs the simulation and renders the environment that the AV experiences.
-	\item Server: It controls the parameters of the simulation and also controls the actions of the AV based on predefined algorithms. 
-	
-\end{itemize}
+\subsubsection{Client} It runs the simulation and renders the environment that the AV experiences.
+
+\subsubsection{Server} It controls the parameters of the simulation and also controls the actions of the AV based on predefined algorithms. 
 
 \begin{figure}  [h]
 	\vspace{-0.5em}
