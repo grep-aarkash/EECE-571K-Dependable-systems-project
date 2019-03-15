@@ -22,9 +22,7 @@ CARLA is an open source simulator built on Unreal Engine 4. CARLA provides simul
 
 Due to this client-server architecture CARLA provides flexibility to swap multiple driving algorithms (called driving agents in CARLA terminology) and driving environments easily. The server provides the ability to render a range of environments by changing the weather, number of vehicles and pedestrians etc in the simulation environment. The server also provides the output of various sensors attached to AV to the driving agent. The client connects to the server using sockets and provides two type of inputs, commands and meta-commands, to the server. Commands control the behavior of the vehicles i.e braking, steering, accelerating etc. and are provided by the driving agent which is integrated with client side in CARLA using python APIs. Meta-commands are used to control the behavior of simulation.
 
-Although CARLA provides ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors present produce successful results for more than 90 percent trials. Following this information we primarily select the following environmental conditions for our experiments. 
-
-The ideal destination of vehicle is on the same line as the starting points with a distance of 200m and no dynamic objects are present in the simulation.
+Although CARLA provides ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors present produce successful results for more than 90 percent trials. Following this information we primarily select simple environmental conditions and objectives for our experiments. 
 
 \subsection{Driving Agent}
 As mentioned in the previous section the behavior of the vehicle in te simulation is controlled by the driving agent. As we want to study the resilience of CARLA, we have chosen an already developed driving agent, which uses conditional imitation learning to train a deep neural network~\cite{Codevilla2018}, which after offline training, is used for inferencing for taking decision during simulation. We take an already trained model and use that in our Fault injection phase. Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that success rate of the trained driving agent for the chosen environmental conditions is greater than 95\%.
@@ -48,5 +46,9 @@ The sensor readings are provided in form of dictionary to driving agent from the
 
 The fault space for even one sensor using approach mentioned above is quite big, which may lead to state space explosion. We intend to use this approach as a stepping stone towards finding a systematic approach for FI.  
 
-\subsection{Constraints}
- 
+\subsection{Limitations}
+Following limitations are present in our testing environment, which are guided by literature review and time constraints.
+
+\subsubsection{Path} The ideal path of the AV is a straight line and the distance between starting and ending position is 200m. 
+
+\subsubsection{Static Environment} No dynamic objects (i.e. NPC vehicles, pedestrians etc.) are present in the simulation environment. 
