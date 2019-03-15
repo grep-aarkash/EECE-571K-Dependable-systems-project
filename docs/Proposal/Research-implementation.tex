@@ -13,7 +13,7 @@ CARLA is an open source simulator built on Unreal Engine 4. CARLA provides simul
 	\centering
 	\includegraphics[scale=0.4]{CARLA_block}
 	\vspace{-0.5em}
-	\caption{High level architecture of CARLA}
+	\caption{High level architecture of CARLA, Server sends sensor data to the client which integrates with driving agent and returns driving commands to server.}
 	\label{fig:carla_arch}
 	\vspace{-1.5em}
 \end{figure}
@@ -35,7 +35,7 @@ As mentioned in~\ref{ri-carla} CARLA provides a client server architecture. We e
 	\centering
 	\includegraphics[scale=0.3]{FI_method}
 	\vspace{-0.5em}
-	\caption{Fault injection method used in experiments}
+	\caption{Life cycle of an experiment trial on client side, Fault is injected by altering sensor readings received by client.}
 	\label{fig:FI_method}
 	\vspace{-1.5em}
 \end{figure}
