@@ -30,7 +30,7 @@ As mentioned in the previous section the behavior of the vehicle in te simulatio
 \subsection{Fault Injection method} \label{method}
 As mentioned in~\ref{ri-carla} CARLA provides a client server architecture. We exploit this boundary between client and server for our fault injection experiments. 
 
-\begin{figure}  [h]
+\begin{figure}  
 	\vspace{-0.5em}
 	\centering
 	\includegraphics[scale=0.3]{FI_method}
@@ -46,9 +46,9 @@ The sensor readings are provided in form of dictionary to driving agent from the
 
 The fault space for even one sensor using approach mentioned above is quite big, which may lead to state space explosion. We intend to use this approach as a stepping stone towards finding a systematic approach for FI.  
 
-\subsection{Limitations}
-Following limitations are present in our testing environment, which are guided by literature review and time constraints.
+\subsection{Environment Setup}
+We consider the following two environment setups for performing fault injections.
 
-\subsubsection{Path} The ideal path of the AV is a straight line and the distance between starting and ending position is 200m. 
+\subsubsection{ Straight Path} The ideal path of the AV is a straight line and the distance between starting and ending position is 200m. 
 
 \subsubsection{Static Environment} No dynamic objects (i.e. NPC vehicles, pedestrians etc.) are present in the simulation environment. 

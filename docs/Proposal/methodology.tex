@@ -26,15 +26,14 @@ Our contribution is two-fold in this work. First, by an in depth understanding o
 % general categorization of the fault-model
 Analyzing the system, we designed a fault model for autonomous driving systems. We categorized the fault occurrence in two ways: due to some physical damage or due to network issues. These two categories of faults cover almost all possible components of the systems which can lead to a failure of the system. 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=1.0\linewidth]{Fault-model1}
-	\caption[Fault-model for ADS]{This shows a general fault model of Autonomous Driving Systems. We have kept it generic enough to be considered for different Autonomous systems. However, our work is oriented towards autonomous cars.}
-	\label{fig:fault-model1}
-\end{figure}
+
+
+
+
+
 
 %why do we define the fault-model of the entire system
-In Figure~\ref{fig:fault-model1} we try to give a complete fault model of autonomous vehicles. However, covering the failures caused by each component is out of scope of our current paper. Also, analyzing failure rates in general instead of component wise failure rates will not provide us with useful set of results. Hence we built a complete fault-model of the system initially. After building a comprehensive fault-model, based on our judgment, we decided to focus on one of the core set of components of ADS.
+In Figure~\ref{fig:fault-modelgeneral} we try to give a complete fault model of autonomous vehicles. However, covering the failures caused by each component is out of scope of our current paper. Also, analyzing failure rates in general instead of component wise failure rates will not provide us with useful set of results. Hence we built a complete fault-model of the system initially. After building a comprehensive fault-model, based on our judgment, we decided to focus on one of the core set of components of ADS.
 
 %Core Components we selected for faults in ADS
  The core component we selected were the  sensors used in ADS. However, every sensor used in ADS is very detailed oriented and performs multiple functionalities. So out of the four major sensors which we have explained in further details in Section 3, we focused on LIDAR. 
@@ -48,6 +47,13 @@ In Figure~\ref{fig:fault-model1} we try to give a complete fault model of autono
  
 \subsection{Fault Injection} \label{fi_m}
 In this section we describe the faults that we inject in sensor data according to our fault model and the effects of these faults. In our study we focus on two type of faults.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\linewidth]{Sensor-faults}
+	\caption{In the sensor faults (LIDAR), we consider hardware and data faults. }
+	\label{fig:sensor-faults}
+\end{figure}
 
 \subsubsection{Hardware faults} These faults represent the soft errors that can occur in the data that is recorded by the sensors. These faults can occur in the registers of sensor units, in communication links between sensor and control unit and with in registers where these values are stored in the main ADS controller. Regardless of the location where the fault occurs, we assume that it is always activated and observed by the client when it reads the sensor data. This type of faults in real life can introduce single and multiple bit flips randomly in the sensor readings, which is modeled by our FI technique.
 	
