@@ -26,7 +26,7 @@ Our contribution is two-fold in this work. First, by an in depth understanding o
 % general categorization of the fault-model
 Analyzing the system, we designed a fault model for autonomous driving systems. We categorized the fault occurrence in two ways: due to some physical damage or due to network issues. These two categories of faults cover almost all possible components of the systems which can lead to a failure of the system. 
 
-
+\\TODO- components of the LIDAR.
 
 
 
@@ -42,12 +42,16 @@ In Figure~\ref{fig:fault-modelgeneral} we try to give a complete fault model of 
  %A little more about LIDAR
  LIDAR is a very expensive sensor and hence finding the failure rates of the system, caused due to LIDAR can help the designers understand how to mitigate the faults such that they don't lead to failures. ADS being safety critical systems, can cause a lot of harm ( death in the worst case scenario ) in case of a failure. 
  
+ \subsubsection{Hardware faults} These faults represent the soft errors that can occur in the data that is recorded by the sensors. These faults can occur in the registers of sensor units, in communication links between sensor and control unit and with in registers where these values are stored in the main ADS controller. Regardless of the location where the fault occurs, we assume that it is always activated and observed by the client when it reads the sensor data. This type of faults in real life can introduce single and multiple bit flips randomly in the sensor readings, which is modeled by our FI technique.
+ 
+ \subsubsection{Data Faults} These faults refers to the condition in which the sensors give a readings which are not correct according to the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the surroundings that are used in decision making process by the ADS (e.g. lane markings on road). For example, A LIDAR mapping its surrounded by laser can be effected by rainy weather such that the laser bouncing from the surrounding objects is effected by rainy weather thus the mapping produced by LIDAR is not representative of real environment.
  %LIDAR fault model
  We will be providing the fault-model for ADS in our final report.
  
 \subsection{Fault Injection} \label{fi_m}
 In this section we describe the faults that we inject in sensor data according to our fault model and the effects of these faults. In our study we focus on two type of faults.
 
+THESE ARE THE TYPES OF FAULTS AND HOW ARE YOU INJECTING????
 \begin{figure}
 	\centering
 	\includegraphics[width=1.0\linewidth]{Sensor-faults}
@@ -55,9 +59,7 @@ In this section we describe the faults that we inject in sensor data according t
 	\label{fig:sensor-faults}
 \end{figure}
 
-\subsubsection{Hardware faults} These faults represent the soft errors that can occur in the data that is recorded by the sensors. These faults can occur in the registers of sensor units, in communication links between sensor and control unit and with in registers where these values are stored in the main ADS controller. Regardless of the location where the fault occurs, we assume that it is always activated and observed by the client when it reads the sensor data. This type of faults in real life can introduce single and multiple bit flips randomly in the sensor readings, which is modeled by our FI technique.
-	
-\subsubsection{Data Faults} These faults refers to the condition in which the sensors give a readings which are not correct according to the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the surroundings that are used in decision making process by the ADS (e.g. lane markings on road). For example, A LIDAR mapping its surrounded by laser can be effected by rainy weather such that the laser bouncing from the surrounding objects is effected by rainy weather thus the mapping produced by LIDAR is not representative of real environment.
+PICK UP FIRST SECTION FROM THE NEXT SECTION AND PUT IT HERE. 
 
 In our study with random Fault injection we study each fault separately, so for a set of related experiments we only inject one type of fault. Only one fault is injected in each execution run and its effect on the overall operation is observed. The goal and path to navigate is constant in each trial so that outcome of each trail can be compared with output of a golden run, in which no fault was injected. We use the following metrics to quantify the resilience of ADS which are inline with previous work in this domain~\cite{avfi}.
 \setcounter{subsubsection}{0}
