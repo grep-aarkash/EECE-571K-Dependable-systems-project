@@ -26,7 +26,7 @@ Our contribution is two-fold in this work. First, by an in depth understanding o
 % general categorization of the fault-model
 Analyzing the system, we designed a fault model for autonomous driving systems. We categorized the fault occurrence in two ways: due to some physical damage or due to network issues. These two categories of faults cover almost all possible components of the systems which can lead to a failure of the system. 
 
-\\TODO- components of the LIDAR.
+%\\TODO- components of the LIDAR.
 
 
 
@@ -45,28 +45,54 @@ In Figure~\ref{fig:fault-modelgeneral} we try to give a complete fault model of 
  \subsubsection{Hardware faults} These faults represent the soft errors that can occur in the data that is recorded by the sensors. These faults can occur in the registers of sensor units, in communication links between sensor and control unit and with in registers where these values are stored in the main ADS controller. Regardless of the location where the fault occurs, we assume that it is always activated and observed by the client when it reads the sensor data. This type of faults in real life can introduce single and multiple bit flips randomly in the sensor readings, which is modeled by our FI technique.
  
  \subsubsection{Data Faults} These faults refers to the condition in which the sensors give a readings which are not correct according to the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the surroundings that are used in decision making process by the ADS (e.g. lane markings on road). For example, A LIDAR mapping its surrounded by laser can be effected by rainy weather such that the laser bouncing from the surrounding objects is effected by rainy weather thus the mapping produced by LIDAR is not representative of real environment.
+ 
+\begin{figure}
+ 	\centering
+ 	\includegraphics[width=1.0\linewidth]{Sensor-faults}
+ 	\caption{In the sensor faults (LIDAR), we consider hardware and data faults. }
+ 	\label{fig:sensor-faults}
+\end{figure}
+
  %LIDAR fault model
  We will be providing the fault-model for ADS in our final report.
  
-\subsection{Fault Injection} \label{fi_m}
-In this section we describe the faults that we inject in sensor data according to our fault model and the effects of these faults. In our study we focus on two type of faults.
+\input{Research-implementation}
 
-THESE ARE THE TYPES OF FAULTS AND HOW ARE YOU INJECTING????
-\begin{figure}
+\subsection{Fault Injection} \label{fi_m}
+
+% Done - PICK UP FIRST SECTION FROM THE NEXT SECTION AND PUT IT HERE. 
+
+In our study with random Fault injection we study each fault separately, so for a set of related experiments we only inject one type of fault. Only one fault is injected in each execution run and its effect on the overall operation is observed. The goal and path to navigate is constant in each trial so that outcome of each trail can be compared with output of a golden run, in which no fault was injected. 
+
+\begin{figure}  
+	\vspace{-0.5em}
 	\centering
-	\includegraphics[width=1.0\linewidth]{Sensor-faults}
-	\caption{In the sensor faults (LIDAR), we consider hardware and data faults. }
-	\label{fig:sensor-faults}
+	\includegraphics[scale=0.3]{FI_method}
+	\vspace{-0.5em}
+	\caption{Life cycle of an experiment trial on client side, Fault is injected by altering sensor readings received by client.}
+	\label{fig:FI_method}
+	\vspace{-1.5em}
 \end{figure}
 
-PICK UP FIRST SECTION FROM THE NEXT SECTION AND PUT IT HERE. 
+% THESE ARE THE TYPES OF FAULTS AND HOW ARE YOU INJECTING????
+\textcolor{red}{We need a text block about how we represent different faults and justify it, from literature review}
 
-In our study with random Fault injection we study each fault separately, so for a set of related experiments we only inject one type of fault. Only one fault is injected in each execution run and its effect on the overall operation is observed. The goal and path to navigate is constant in each trial so that outcome of each trail can be compared with output of a golden run, in which no fault was injected. We use the following metrics to quantify the resilience of ADS which are inline with previous work in this domain~\cite{avfi}.
+As mentioned in~\ref{ri-carla} CARLA provides a client server architecture. We exploit this boundary between client and server for our fault injection experiments. Figure~\ref{fig:FI_method} provides an overview of method of fault injection used in one trial. The CARLA platform provides an ability to run multiple trails of the same experiments (same environment and goals). Each trial involves multiple steps. In each step, data is read from the sensors, this data is provided to the controller which based on some predefined algorithm and current sensor readings, gives command to the AV, after the command, it is checked if the objective of the trial is achieved or the timeout has happened. If any of these condition exists, we end the current trial and the using the measurements from the server, the metrics defined in~\ref{fi_m} are calculated for this trial and after that we move on to the next trial. 
+
+The sensor readings are provided in form of dictionary to driving agent from the client, which can be easily accessed in the code. We insert a code block in between reading data from server and sending it to driving agent. This code block changes the reading of the sensor under study based on the fault that we are testing.
+
+We use the following metrics to quantify the resilience of ADS which are inline with previous work in this domain~\cite{avfi}.
 \setcounter{subsubsection}{0}
 
+\medskip
 \subsubsection{Success percentage} This metric represents the fraction of total trials in which the ADS was successful in achieving the specified target when faults are injected.
 
+\smallskip
 
 \subsubsection{Violations per trial} This metric captures the traffic violations that occur during each trial. The violations that we consider for calculating this metric are lane violation and curb violations (reasons for not considering collisions with dynamic objects are explained in \ref{ri-carla}). 
 
-The two metrics used provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behavior, which may not lead to outright failure but violate safety properties.
+The two metrics used, provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behavior, which may not lead to outright failure but violate safety properties.
+
+% Moved from the other section here
+
+%\subsection{Fault Injection method} \label{method}
