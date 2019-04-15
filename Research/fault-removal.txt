@@ -1,15 +1,15 @@
-Types of Faults 
+Types of Faults
 Data Faults
-1. Image noise 
-	a. Gaussian
-	b. Salt and pepper 
-	c. Speckle noise 
+1. Image noise
+	a. Gaussian - mean(convolution filtering), median filtering, Gaussian smoothing
+	b. Salt and pepper
+	c. Speckle noise
 	d. Poisson Noise
 2. Channel Occlusion
 	a. Red
 	b. Green
 	c. Blue
-3. Partial occlusion 
+3. Partial occlusion
 
 Hardware Faults
 1. Bit flip errors
