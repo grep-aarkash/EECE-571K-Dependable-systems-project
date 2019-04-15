@@ -1,0 +1,14 @@
+There are different types of faults which can occur in the sensors. The two categories which we
+discuss are data-faults and hardware-faults. The faults can be produced by the sensor which in
+our case is the camera.
+
+
+Image noise: Image noise is the random variation of brightness or color information in images.
+The effects of image noises are diverse and can vary from causing minimal damage to the image to
+a level which makes it difficult to determine the subject in the image. 
+
+Gaussian noise
+Main article: Gaussian noise
+Principal sources of Gaussian noise in digital images arise during acquisition. The sensor has inherent noise due to the level of illumination and its own temperature, and the electronic circuits connected to the sensor inject their own share of electronic circuit noise.[3]
+
+A typical model of image noise is Gaussian, additive, independent at each pixel, and independent of the signal intensity, caused primarily by Johnson–Nyquist noise (thermal noise), including that which comes from the reset noise of capacitors ("kTC noise").[4] Amplifier noise is a major part of the "read noise" of an image sensor, that is, of the constant noise level in dark areas of the image.[5] In color cameras where more amplification is used in the blue color channel than in the green or red channel, there can be more noise in the blue channel.[6] At higher exposures, however, image sensor noise is dominated by shot noise, which is not Gaussian and not independent of signal intensity. Also, there are many Gaussian denoising algorithms. [7]

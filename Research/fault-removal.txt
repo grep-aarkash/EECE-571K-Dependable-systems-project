@@ -2,7 +2,7 @@ Types of Faults
 Data Faults
 1. Image noise
 	a. Gaussian - mean(convolution filtering), median filtering, Gaussian smoothing
-	b. Salt and pepper
+	b. Salt and pepper - median filter or a morphological filter
 	c. Speckle noise
 	d. Poisson Noise
 2. Channel Occlusion
