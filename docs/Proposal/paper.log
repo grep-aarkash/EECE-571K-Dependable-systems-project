@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.11)  15 APR 2019 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.11)  15 APR 2019 23:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,11 +465,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <FI_method.jpg, id=20, 539.01375pt x 541.02126pt>
 File: FI_method.jpg Graphic file (type jpg)
 <use FI_method.jpg>
-Package pdftex.def Info: FI_method.jpg  used on input line 75.
+Package pdftex.def Info: FI_method.jpg  used on input line 77.
 (pdftex.def)             Requested size: 161.70537pt x 162.30762pt.
- [4 <./finalFM.png> <./CARLA_block.jpg> <./FI_method.jpg>]) (./Evaluation.tex) 
-(./conclusion.tex)
-(./discussion.tex) (./paper.bbl
+ [4 <./finalFM.png> <./CARLA_block.jpg>]) (./Evaluation.tex) (./conclusion.tex)
+ (./discussion.tex)
+(./paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 56--60
 []\OT1/ptm/m/n/8 MIT Tech-nol-ogy Re-view.  One cam-era is all this self-
  []
@@ -492,7 +492,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] (./paper.aux) ) 
+[5 <./FI_method.jpg>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
  4482 strings out of 492982
  64852 string characters out of 6134896
@@ -501,13 +501,13 @@ Here is how much of TeX's memory you used:
  41692 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,35p,1647b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on paper.pdf (5 pages, 207283 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (5 pages, 208072 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream

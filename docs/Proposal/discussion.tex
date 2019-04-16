@@ -1,1 +1,6 @@
 \section{Discussion}
+In order to perform the first set of experimentations, we initially chose LIDAR. However, simulating a LIDAR sensor is difficult since, the number of states in LIDAR are not finite. It is continuously rotating and obtaining new results and hence changing states. Hence, we decided to change our initial sensor and chose a camera instead.
+
+The first fault-injection methodology though provides a good coverage incurs a lot of overhead. In order to optimize the injection process, we inject faults after every 10 frames. However, we observe that this reduces the coverage though providing us with better overhead. Hence, this becomes a question of trade-off between overhead and coverage. 
+
+
