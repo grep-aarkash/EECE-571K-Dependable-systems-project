@@ -1,3 +1,7 @@
+Faults with the Cars: https://www.theguardian.com/technology/2016/jan/12/google-self-driving-cars-mistakes-data-reports
+
+
+
 There are different types of faults which can occur in the sensors. The two categories which we
 discuss are data-faults and hardware-faults. The faults can be produced by the sensor which in
 our case is the camera.
@@ -5,7 +9,7 @@ our case is the camera.
 
 Image noise: Image noise is the random variation of brightness or color information in images.
 The effects of image noises are diverse and can vary from causing minimal damage to the image to
-a level which makes it difficult to determine the subject in the image. 
+a level which makes it difficult to determine the subject in the image.
 
 Gaussian noise
 Main article: Gaussian noise
