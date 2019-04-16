@@ -18,6 +18,14 @@
 %CARLA will be used as a test platform for development and testing of our approach as it provides a convenient way to instrument and modify the readings of different sensors, as well as the behavior of driver agents that controls the autonomous vehicle. 
 
 %Current approaches that analyze resilience of ADS systems on a holistic level perform fault injections to find vulnerabilities in the system which is quite resource intensive. Details about such approaches is provided in section \ref{related_work}. Our proposed methodology will forgo such ad hoc approaches and test different components of an ADS in a systematic way by modeling its behavior and using formal methods to validate its correctness and finding any unexpected behavior that introduces vulnerabilities in the ADS system. 
+ \begin{figure*}
+ 	\centering
+ 	\includegraphics[width=0.7\linewidth]{finalFM}
+ 	\caption[Fault model for camera]{}
+ 	\label{fig:finalfm}
+ \end{figure*}
+ 
+
 
 % Our contribution
 Our contribution is two-fold in this work. First, by an in depth understanding of autonomous vehicles, we device a fault model for the vehicle in general. We specifically focus on the sensor faults and design a fault-model specific to the sensors. Second, based on our fault model, we inject faults in order to obtain the failure rate of the system caused due to the sensor faults. We attempt fault injection in order to get maximum coverage of the system in an optimal manner.
@@ -33,28 +41,25 @@ Analyzing the system, we designed a fault model for autonomous driving systems. 
 
 
 %why do we define the fault-model of the entire system
-In Figure~\ref{fig:fault-modelgeneral} we try to give a complete fault model of autonomous vehicles. However, covering the failures caused by each component is out of scope of our current paper. Also, analyzing failure rates in general instead of component wise failure rates will not provide us with useful set of results. Hence we built a complete fault-model of the system initially. After building a comprehensive fault-model, based on our judgment, we decided to focus on one of the core set of components of ADS.
+In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. However, covering the failures caused by each component is out of scope of our current paper. Also, analysing failure rates in general instead of component wise failure rates does not provide us with useful set of results. Hence we introduce a fault-model for the sensors of an ADS. 
 
 %Core Components we selected for faults in ADS
- The core component we selected were the  sensors used in ADS. However, every sensor used in ADS is very detailed oriented and performs multiple functionalities. So out of the four major sensors which we have explained in further details in Section 3, we focused on LIDAR. 
+ The core component we selected were the  sensors used in ADS. The sensors are one of the most expensive parts of an ADS. Hence, determining the failure rates due to these sensors can help us in minimizing damage. We described different categories of sensors in Section-3. We start with an analysis of one of the sensors described above.
  
- \subsection{Fault-model of LIDAR}
- %A little more about LIDAR
- LIDAR is a very expensive sensor and hence finding the failure rates of the system, caused due to LIDAR can help the designers understand how to mitigate the faults such that they don't lead to failures. ADS being safety critical systems, can cause a lot of harm ( death in the worst case scenario ) in case of a failure. 
+ \subsection{Fault-model of Camera}
+ %A little more about Camera
+ Camera is a very expensive sensor and hence finding the failure rates of the system, caused due to camera can help the designers understand how to mitigate the faults such that they don't lead to failures. ADS being safety critical systems, can cause a lot of harm ( death in the worst case scenario ) in case of a failure. 
  
- \subsubsection{Hardware faults} These faults represent the soft errors that can occur in the data that is recorded by the sensors. These faults can occur in the registers of sensor units, in communication links between sensor and control unit and with in registers where these values are stored in the main ADS controller. Regardless of the location where the fault occurs, we assume that it is always activated and observed by the client when it reads the sensor data. This type of faults in real life can introduce single and multiple bit flips randomly in the sensor readings, which is modeled by our FI technique.
+ \subsubsection{Hardware faults} These faults represent the soft errors that can occur in the data that is recorded by the sensors. These faults can occur in the registers of sensor units, in communication links between sensor and control unit and within registers where these values are stored in the main ADS controller. Regardless of the location where the fault occurs, we assume that it is always activated and observed by the client when it reads the sensor data. These type of faults in real life can introduce single and multiple bit flips randomly in the sensor readings, which is modelled by our FI technique. 
+ \vskip 0.2in
+ 
+ 
+ %introduce the notion of 
  
  \subsubsection{Data Faults} These faults refers to the condition in which the sensors give a readings which are not correct according to the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the surroundings that are used in decision making process by the ADS (e.g. lane markings on road). For example, A LIDAR mapping its surrounded by laser can be effected by rainy weather such that the laser bouncing from the surrounding objects is effected by rainy weather thus the mapping produced by LIDAR is not representative of real environment.
- 
-\begin{figure}
- 	\centering
- 	\includegraphics[width=1.0\linewidth]{Sensor-faults}
- 	\caption{In the sensor faults (LIDAR), we consider hardware and data faults. }
- 	\label{fig:sensor-faults}
-\end{figure}
 
- %LIDAR fault model
- We will be providing the fault-model for ADS in our final report.
+ 
+.
  
 \input{Research-implementation}
 
@@ -91,7 +96,7 @@ We use the following metrics to quantify the resilience of ADS which are inline 
 
 \subsubsection{Violations per trial} This metric captures the traffic violations that occur during each trial. The violations that we consider for calculating this metric are lane violation and curb violations (reasons for not considering collisions with dynamic objects are explained in \ref{ri-carla}). 
 
-The two metrics used, provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behavior, which may not lead to outright failure but violate safety properties. 
+The two metrics used, provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behaviour, which may not lead to outright failure but violate safety properties. 
 
 % Moved from the other section here
 
