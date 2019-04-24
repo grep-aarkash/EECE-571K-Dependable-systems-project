@@ -1,9 +1,21 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{GPS}
 NVIDIA BLOG.
 \newblock Beyond gps: How hd maps will show self-driving cars the way.
 \newblock \url{https://blogs.nvidia.com/blog/2016/04/05/self-driving-cars-2/}.
+
+\bibitem{inproceedings}
+Davide Bresolin.
+\newblock Fault diagnosis of hybrid systems: An onboard camera model.
+\newblock volume~8, pages 714--719, 08 2012.
+
+\bibitem{5530865}
+L.~M. {Capisani}, A.~{Ferrara}, and P.~{Pisu}.
+\newblock Sliding mode observers for vision-based fault detection, isolation
+  and identification in robot manipulators.
+\newblock In {\em Proceedings of the 2010 American Control Conference}, pages
+  4540--4545, June 2010.
 
 \bibitem{Codevilla2018}
 Felipe Codevilla, Matthias M{\"u}ller, Antonio L{\'o}pez, Vladlen Koltun, and
