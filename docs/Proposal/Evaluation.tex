@@ -41,12 +41,6 @@ We try to understand if all image noises indeed cause the failure of the system.
 
 \textbf{RQ3: What subset of the above faults cause the most amount of system damage i.e System failure?}
 
-Figure~\ref{fig:success_rate} shows the success rate of ADS after injection of faults. It can be seen that hardware faults, which are represented as single bit flips in our experiments, do not cause any failures. The output data of image sensor consists of approximately 11.5 million bits, so a single random bit flip event is highly unlikely to cause a perturbation that leads to system failure. Figure~\ref{fig:no_violations} shows the fraction of trials in which the ADS committed any traffic violation, this graph shows that there were no traffic violations when single bit flip faults were injected in the image sensor data. These results validate our approach of focusing on data faults.
-
-For channel occlusion faults, it can be seen that Red channel occlusion leads to highest number of failures as the success rate is only \texttildelow30\%. Green and Blue channel occlusions only result in approximately 10\% decrease in success rate. Similar trends can be seen from Figure~\ref{fig:no_violations} in which Red channel occlusions lead to significantly more traffic violations than other channel occlusions. This shows that the driving agent relies more on red channel then other channels in sensor data. The partial occlusion faults also cause a significant number of failures in the system, with approximately 15\% of trials resulting in failures.
-
-For image noises it can be observed from Figure~\ref{fig:success_rate} and Figure~\ref{fig:no_violations} different noises have varying effects on the success of system behavior. Speckle noise results in the highest number of failures and the success rate in case of speckle noise injection is only \texttildelow40\%. On the other hand injection of Poison noise, results in no failures although Poisson noise causes some traffic violations but none of these violations lead to system failure.
-
 \begin{figure}
 	\vspace{-0.5em}
 	\centering
@@ -67,7 +61,38 @@ For image noises it can be observed from Figure~\ref{fig:success_rate} and Figur
 	\vspace{-1.5em}
 \end{figure}
 
+Figure~\ref{fig:success_rate} shows the success rate of ADS after injection of faults. It can be seen that hardware faults, which are represented as single bit flips in our experiments, do not cause any failures. The output data of image sensor consists of approximately 11.5 million bits, so a single random bit flip event is highly unlikely to cause a perturbation that leads to system failure. Figure~\ref{fig:no_violations} shows the fraction of trials in which the ADS committed any traffic violation, this graph shows that there were no traffic violations when single bit flip faults were injected in the image sensor data. These results validate our approach of focusing on data faults.
 
+For channel occlusion faults, it can be seen that Red channel occlusion leads to highest number of failures as the success rate is only \texttildelow30\%. Green and Blue channel occlusions only result in approximately 10\% decrease in success rate. Similar trends can be seen from Figure~\ref{fig:no_violations} in which Red channel occlusions lead to significantly more traffic violations than other channel occlusions. This shows that the driving agent relies more on red channel then other channels in sensor data. The partial occlusion faults also cause a significant number of failures in the system, with approximately 15\% of trials resulting in failures.
 
+For image noises it can be observed from Figure~\ref{fig:success_rate} and Figure~\ref{fig:no_violations} different noises have varying effects on the success of system behavior. Speckle noise results in the highest number of failures and the success rate in case of speckle noise injection is only \texttildelow40\%. On the other hand injection of Poison noise, results in no failures although Poisson noise causes some traffic violations but none of these violations lead to system failure.
+
+\textbf{RQ4: What are the overheads associated with Fault Injection in CARLA?}
+
+From previous RQ we know that channel occlusion faults and noise addition faults result in most failures of the system so from now on we focus on these faults. For finding the metrics mentioned in Figure~\ref{fig:success_rate} and Figure~\ref{fig:no_violations} we use exhaustive Fault injection. For injecting noise in the sensor data all the pixels in the image have to be updated in every iteration, similarly for channel occlusion faults all the pixels of a particular channel have to be updated in every iteration. The image produced by the camera consist of around 1.4 millions pixels. Updating such a high number values in every iteration of the episode has a huge overhead. Figure~\ref{fig:overhead} shows the average time taken by a single episode of the experiments with and without data fault injections. It can be clearly seen that injecting data faults leads to almost 4 times more time spent in each episode. This overhead and thousands of FI experiments required for exhaustive FI makes this method of FI unscalable. 
+
+\begin{figure}  
+	\vspace{1.0em}
+	\centering
+	\includegraphics[scale=0.7]{overhead}
+	\vspace{-0.5em}
+	\caption{Average Overhead of injection of data faults in seconds.}
+	\label{fig:overhead}
+	\vspace{-1.5em}
+\end{figure}
+
+We analyzed the failures due to the data faults for any information that can lead to a technique which provides the same coverage as exhaustive FI with less overhead. An interesting fact that emerged from this study was that about 80\% of the failures due to data faults were concentrated near such locations in the environment which were critical. These critical locations include intersections, traffic lights and traffic signs. Figure~\ref{fig:map_critical} shows a subset of these locations on the map that we use for our experiments. We also note that the pattern of parameters of commands, that the controller uses to control the action of the ADS, changes when these critical locations are detected. We combine these two observations to theorize that injecting fault on these locations can lead to all the failures that we observed at these locations during exhaustive fault injections.
+
+Testing the proposed hypothesis reveals that a single data fault injected at critical location does not lead to system failures. We theorize that a single fault is not able to cause large enough deviation in the behavior of ADS to cause a system failure and the Neural network used in the driving agent is able to overcome this fault. With this observation in mind, we injected faults in iterations preceding these critical locations and observed that by increasing the number of iterations in which faults are injected the coverage of FI can be increased, but the drawback is that for the same level of coverage as exhaustive FI, almost same number faults have to be injected which defeats the purpose of the proposed technique.   
+
+\begin{figure}  
+	\vspace{1.0em}
+	\centering
+	\includegraphics[scale=0.7]{map_critical}
+	\vspace{-0.5em}
+	\caption{Critical locations in our testing environment, at which most failures are observed.}
+	\label{fig:map_critical}
+	\vspace{-1.5em}
+\end{figure}  
 
 
