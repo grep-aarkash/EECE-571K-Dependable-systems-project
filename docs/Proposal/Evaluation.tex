@@ -27,9 +27,11 @@ a level which makes it difficult to determine the subject in the image. The diff
 
 The second types of data faults which we explore are the occlusions. Occlusion means that there is something we want to see, but can't due to some property of our sensor setup or some event. The way of dealing with occlusions varies depending on the way it was caused. If we are developing a system which tracks objects (people, cars, ...) then occlusion occurs if an object you are tracking is hidden (occluded) by another object. Like two persons walking past each other, or a car that drives under a bridge. The problem in this case is what we do when an object disappears and reappears again.
 
-\textbf{RQ2: What faults do we consider for the autonomous driving systems?}
+\textbf{RQ2: What faults do we consider for the autonomous driving systems and why?}
 
-In order to validate our results and understand which faults
+In order to validate our results and understand we limit our experimentation model. Based on our judgment and understanding, we find experimenting with data faults more compelling as compared to hardware faults. Our reason are well-justified and we will validate them in the next set of RQs.
+
+CARLA helped us simulate the optical sensors, in order to understand the failure rates due to image noises and occlusions. We look into different types of occlusions as shows in Fig 2.
 
 
 
