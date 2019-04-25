@@ -31,11 +31,6 @@ Alexey Dosovitskiy, German Ros, Felipe Codevilla, Antonio Lopez, and Vladlen
 \newblock In {\em Proceedings of the 1st Annual Conference on Robot Learning},
   pages 1--16, 2017.
 
-\bibitem{2014arXiv1412.6572G}
-I.~J. {Goodfellow}, J.~{Shlens}, and C.~{Szegedy}.
-\newblock {Explaining and Harnessing Adversarial Examples}.
-\newblock {\em arXiv e-prints}, December 2014.
-
 \bibitem{teslasr}
 Tesla Inc.
 \newblock Vehicle safety report ({Q4}-2018).
@@ -80,5 +75,11 @@ MIT~Technology Review.
 \newblock One camera is all this self-driving car needs.
 \newblock
   \url{https://www.technologyreview.com/s/539841/one-camera-is-all-this-self-driving-car-needs/}.
+
+\bibitem{Zhou}
+J.~{Zhou}, S.~{Ntafos}, and B.~{Prabhakaran}.
+\newblock Fault detection framework for video surveillance systems.
+\newblock In {\em 2008 IEEE Fifth International Conference on Advanced Video
+  and Signal Based Surveillance}, pages 219--226, Sep. 2008.
 
 \end{thebibliography}

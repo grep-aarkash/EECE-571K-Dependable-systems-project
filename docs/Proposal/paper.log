@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,18 +546,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-])
-(./Background.tex
+]
+
+LaTeX Warning: Citation `Goodfellow' on page 2 undefined on input line 10.
+
+) (./Background.tex
 <Fault-modelgeneral.jpg, id=10, 684.5575pt x 257.96375pt>
 File: Fault-modelgeneral.jpg Graphic file (type jpg)
 <use Fault-modelgeneral.jpg>
 Package pdftex.def Info: Fault-modelgeneral.jpg  used on input line 4.
 (pdftex.def)             Requested size: 361.19843pt x 136.11395pt.
-
-Underfull \vbox (badness 1810) has occurred while \output is active []
-
- [2])
-(./methodology.tex
+ [2]) (./methodology.tex
 <finalFM.png, id=14, 1478.52374pt x 594.22pt>
 File: finalFM.png Graphic file (type png)
 <use finalFM.png>
@@ -605,6 +604,14 @@ File: FI_method.jpg Graphic file (type jpg)
 Package pdftex.def Info: FI_method.jpg  used on input line 150.
 (pdftex.def)             Requested size: 161.70537pt x 162.30762pt.
 ) (./Evaluation.tex [5 <./pure_data.jpg> <./faulty_data.jpg> <./FI_method.jpg>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `2014arXiv1412.6572G' on page 6 undefined on input line
+ 38.
+
 <success_rate.jpg, id=31, 352.31625pt x 204.01219pt>
 File: success_rate.jpg Graphic file (type jpg)
 <use success_rate.jpg>
@@ -615,12 +622,10 @@ File: no_violations.png Graphic file (type png)
 <use no_violations.png>
 Package pdftex.def Info: no_violations.png  used on input line 57.
 (pdftex.def)             Requested size: 246.61969pt x 144.9154pt.
-[6 <./success_rate.jpg>]
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 66.
-
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
+) [6]
 <overhead.jpg, id=36, 331.99031pt x 88.07906pt>
 File: overhead.jpg Graphic file (type jpg)
 <use overhead.jpg>
@@ -632,23 +637,19 @@ File: map_critical.png Graphic file (type png)
 Package pdftex.def Info: map_critical.png  used on input line 91.
 (pdftex.def)             Requested size: 184.64859pt x 112.13818pt.
 )
-(./discussion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./no_violations.png> <./overhead.jpg> <./map_critical.png>]) (./conclusion
-.tex)
-(./paper.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 79--83
+(./discussion.tex [7 <./success_rate.jpg> <./no_violations.png> <./overhead.jpg
+>]) (./conclusion.tex) (./paper.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
 []\OT1/ptm/m/n/8 MIT Tech-nol-ogy Re-view.  One cam-era is all this self-
  []
 
 
-Underfull \hbox (badness 6047) in paragraph at lines 79--83
+Underfull \hbox (badness 6047) in paragraph at lines 74--78
 \OT1/ptm/m/n/8 driving car needs.  $https : / / www . technologyreview . com / 
 s / 539841 /
  []
 
-) (./appendix.tex) [8]
+) (./appendix.tex [8 <./map_critical.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -662,22 +663,26 @@ Before submitting the final camera ready copy, remember to:
 
 [9
 
-] (./paper.aux) ) 
+] (./paper.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5718 strings out of 492649
- 87007 string characters out of 6129622
+ 5720 strings out of 492649
+ 87025 string characters out of 6129622
  161599 words of memory out of 5000000
- 9475 multiletter control sequences out of 15000+600000
+ 9477 multiletter control sequences out of 15000+600000
  43084 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,1647b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.en
-c}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (9 pages, 418835 bytes).
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (9 pages, 419395 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
