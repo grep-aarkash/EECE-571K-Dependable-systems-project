@@ -7,14 +7,14 @@ In this section we present the fault model for the sensors. We further evaluate 
 	What faults do we consider for the autonomous driving systems?
 	\item \textbf{RQ3}
 	What subset of the above faults cause the most amount of system damage i.e system failure?
-	\item \textbf{RQ3}
-	What is the failure rate of the faults causing the most amount of damage?
-	\item \textbf{RQ5}
-	What mitigation strategies can we use for preventing those failure rates due to the particular sensor faults in Autonomous vehicles?
+	\item \textbf{RQ4}
+	What are the overheads associated with Fault Injection in CARLA?
+	
 \end{enumerate}
-\vskip 0.2in
+%\vskip 0.1in
 We answer the above research questions. 
-\vskip 0.2in
+
+\vskip 0.1in
 \textbf{RQ1: What all types of faults exist in advance and core sensors in an autonomous vehicle.}
 
 There have been lot of studies which look at the individual sensors. These studies also performed an in-depth analysis of the faults which can be present in sensors such as high-powered cameras \cite{5530865}, \cite{inproceedings}. However, none of the previous work categorizes the fault model into hardware faults and data faults as shown in fig. 2. We not only constructed a fault model for the high-powered image sensors, but we chose the faults which are most likely to occur in case of a self driving car. The previous work by Bresolin et al. \cite{inproceedings} performs a fault diagnosis of hybrid systems. However their fault model is limited, as they only consider the hardware faults. 
@@ -35,13 +35,17 @@ In order to validate our results and understand we limit our experimentation mod
 The degree to which CARLA models the real world autonomous driving systems and their interaction with the environment, is dependent on the simulation parameters and driving agents used for controlling the ADS. In real world autonomous driving systems an array of sensors is used, which captures a representation of the environment. This captured data is used by the controller to make driving decisions. CARLA provides the capability to simulate important sensors like cameras and LIDARs but some important sensors like Radar can't be simulated. Moreover the developed driving agents do not incorporate all the sensors available in CARLA. For example, the three driving agents studied by Dosovitskiy et al.~\cite{Dosovitskiy17} do not use LIDAR and rely only on camera output to take driving decisions. Using only camera sensors is not a realistic modeling of real world driving systems. 
 
 There are no open source driving agents currently available that use sensors other than camera so in our study the driving agent we chose also uses only camera sensors. As our focus is on faults in camera sensors, this provides us good insight into reliability of ADS due to these faults. Presence of other sensor in the system may lead to masking of these due to other sensors, which is a more realistic representation of a real world system. Studying the effect sensor faults in presence of other sensors, is the next logical step after studying the reliability of ADS due to individual sensor faults.  
-CARLA helped us simulate the optical sensors, in order to understand the failure rates due to image noises and occlusions. We look into different types of occlusions as shows in Fig 2. We test for different noises such as Gaussian noise, salt and pepper noise, speckle noise and Poisson noise. The different types of image noises represent different types of probabilistic faults in an image. For example Gaussian noise distributes the noise uniformly across the entire image. Every image noise has a different probabilistic model. Hence, according to Goodfellow et al. \cite{2014arXiv1412.6572G} we can see that sometimes introducing noise can fool the neural network by giving better results than before. 
+CARLA helped us simulate the optical sensors, in order to understand the failure rates due to image noises and occlusions. We look into different types of occlusions as shows in Fig 2. We test for different noises such as Gaussian noise, salt and pepper noise, speckle noise and Poisson noise. The different types of image noises represent different types of probabilistic faults in an image. For example Gaussian noise distributes the noise uniformly across the entire image. Every image noise has a different probabilistic model. Hence, according to Goodfellow et al.\cite{2014arXiv1412.6572G} we can see that sometimes introducing noise can fool the neural network by giving better results than before. 
 
-We try to understand if all image noises indeed cause the failure of the system. Hence we focus our experimentations in understanding image noise and occlusions.
+We try to understand if all image noises indeed cause the failure of the system. Hence we focus our experimentation in understanding image noise and occlusions.
 
-\textbf{RQ3: What subset of the above faults cause the most amount of system damage i.e system failure?}
+\textbf{RQ3: What subset of the above faults cause the most amount of system damage i.e System failure?}
 
-Figure~\ref{fig:success_rate} shows the success rate of exhaustive fault injection due to different type of injected faults. It can be seen that hardware faults which are represented as bit flips in do not cause any failure.
+Figure~\ref{fig:success_rate} shows the success rate of ADS after injection of faults. It can be seen that hardware faults, which are represented as single bit flips in our experiments, do not cause any failures. The output data of image sensor consists of approximately 11.5 million bits, so a single random bit flip event is highly unlikely to cause a perturbation that leads to system failure. Figure~\ref{fig:no_violations} shows the fraction of trials in which the ADS committed any traffic violation, this graph shows that there were no traffic violations when single bit flip faults were injected in the image sensor data. These results validate our approach of focusing on data faults.
+
+For channel occlusion faults, it can be seen that Red channel occlusion leads to highest number of failures as the success rate is only \texttildelow30\%. Green and Blue channel occlusions only result in approximately 10\% decrease in success rate. Similar trends can be seen from Figure~\ref{fig:no_violations} in which Red channel occlusions lead to significantly more traffic violations than other channel occlusions. This shows that the driving agent relies more on red channel then other channels in sensor data. The partial occlusion faults also cause a significant number of failures in the system, with approximately 15\% of trials resulting in failures.
+
+For image noises it can be observed from Figure~\ref{fig:success_rate} and Figure~\ref{fig:no_violations} different noises have varying effects on the success of system behavior. Speckle noise results in the highest number of failures and the success rate in case of speckle noise injection is only \texttildelow40\%. On the other hand injection of Poison noise, results in no failures although Poisson noise causes some traffic violations but none of these violations lead to system failure.
 
 \begin{figure}
 	\vspace{-0.5em}
