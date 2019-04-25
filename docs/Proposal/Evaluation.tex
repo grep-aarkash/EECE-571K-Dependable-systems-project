@@ -4,7 +4,7 @@ In this section we present the fault model for the sensors. We further evaluate 
 	\item \textbf{RQ1}
 	What all types of faults can exist in advanced and core sensors of Autonomous vehicles such as the optical sensor.?
 	\item \textbf{RQ2}
-	What faults are more commonly observed in the optical sensors?
+	What faults do we consider for the autonomous driving systems?
 	\item \textbf{RQ3}
 	What subset of the above faults cause the most amount of system damage i.e system failure?
 	\item \textbf{RQ3}
@@ -16,12 +16,19 @@ In this section we present the fault model for the sensors. We further evaluate 
 We answer the above research questions. 
 \vskip 0.2in
 \textbf{RQ1: What all types of faults exist in advance and core sensors in an autonomous vehicle.}
+
 Though there have been lot of studies which look at the individual sensors. These studies also performed an indepth analysis of the faults which can be present in a sensors such as high-powered camera \cite{5530865}, \cite{inproceedings}. However, none of the previous work categorizes the fault model into hardware faults and image faults as shown in fig. 2. We not only constructed a fault model for the high-powered sensors, but we chose the faults which are most likely to occur in case of a self driving car. The previous work by Bresolin et al. \cite{inproceedings} performs a fault diagnosis of hybrid systems. However, their fault model is limited as they only consider the hardware faults. 
 
 We chose to start our work with optical sensors because of many reasons. Due to the unstable nature of LIDARs a lot of industrial focus is being shifted towards cameras. A recent work says that soon cheap cameras would replace LIDARs\cite{cheapcamera}. Hence to visualize a 3D world a setup can be constructed using a pair of cameras. In order to do so, it becomes an absolute necessity to understand the faults which can be a part of high-powered cameras as well as low powered cameras. 
 
 As shown in Fig. 2 we consider hardware faults and the weather faults. The two major categories we consider in our system are the image noise and the occlusions. Image noise is the random variation of brightness or color information in images.
 The effects of image noises are diverse and can vary from causing minimal damage to the image to
-a level which makes it difficult to determine the subject in the image.
+a level which makes it difficult to determine the subject in the image. The different types of image noises can occur due to heating up of the camera and the internal circuits. The image noise can also occur due to the different temperature effects. Though there are many existing filter to mitigate the noises, our work is to understand which types of noises despite the numerous filters present cause failure of the system. 
 
-\subsection{Hardware faults}
+The second types of data faults which we explore are the occlusions. Occlusion means that there is something we want to see, but can't due to some property of our sensor setup or some event. The way of dealing with occlusions varies depending on the way it was caused. If we are developing a system which tracks objects (people, cars, ...) then occlusion occurs if an object you are tracking is hidden (occluded) by another object. Like two persons walking past each other, or a car that drives under a bridge. The problem in this case is what we do when an object disappears and reappears again.
+
+\textbf{RQ2: What faults do we consider for the autonomous driving systems?}
+
+
+
+
