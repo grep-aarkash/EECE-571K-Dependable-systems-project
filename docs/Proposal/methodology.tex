@@ -61,45 +61,99 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
  \subsubsection{Data Faults} These faults refers to the condition in which the sensors give a readings which are not correct according to the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the surroundings that are used in decision making process by the ADS (e.g. lane markings on road). For example, A LIDAR mapping its surrounded by laser can be effected by rainy weather such that the laser bouncing from the surrounding objects is effected by rainy weather thus the mapping produced by LIDAR is not representative of real environment.
  \textcolor{red}{Rephrasing required.}
  
-.
+ \subsection{CARLA} \label{ri-carla}
+ CARLA is an open source simulator which simulates a dynamic world and provides a simple interface between environment and autonomous vehicles (AV). The simulation engine simulates a vehicle in a city environment with realistic physics. Measurements representing the environment are provided to a driving agent (DA) which  controls the actions that the AV takes based on these measurements and some predefined algorithm. Figure~\ref{fig:carla_arch} shows the high level architecture of CARLA. CARLA operates in a server-client model in which server handles the simulations, while client controls the actions of the AV(through DA) as well as simulation parameters of the overall system. 
+ %\subsubsection{Client} It runs the simulation and renders the environment that the AV experiences.
  
-\input{Research-implementation}
-
-\subsection{Fault Injection} \label{fi_m}
-
-% Done - PICK UP FIRST SECTION FROM THE NEXT SECTION AND PUT IT HERE. 
-
-In our study with random Fault injection we study each fault separately, so for a set of related experiments we only inject one type of fault. Only one fault is injected in each execution run and its effect on the overall operation is observed. The goal and path to navigate is constant in each trial so that outcome of each trail can be compared with output of a golden run, in which no fault was injected. 
-
-\begin{figure}  
-	\vspace{-0.5em}
-	\centering
-	\includegraphics[scale=0.3]{FI_method}
-	\vspace{-0.5em}
-	\caption{Life cycle of an experiment trial on client side, Fault is injected by altering sensor readings received by client.}
-	\label{fig:FI_method}
-	\vspace{-1.5em}
-\end{figure}
-
-% THESE ARE THE TYPES OF FAULTS AND HOW ARE YOU INJECTING????
-\textcolor{red}{We need a text block about how we represent different faults and justify it, from literature review}
-
-As mentioned in~\ref{ri-carla} CARLA provides a client server architecture. We exploit this boundary between client and server for our fault injection experiments. Figure~\ref{fig:FI_method} provides an overview of method of fault injection used in one trial. The CARLA platform provides an ability to run multiple trails of the same experiments (same environment and goals). Each trial involves multiple steps. In each step, data is read from the sensors, this data is provided to the controller which based on some predefined algorithm and current sensor readings, gives command to the AV, after the command, it is checked if the objective of the trial is achieved or the timeout has happened. If any of these condition exists, we end the current trial and the using the measurements from the server, the metrics defined in~\ref{fi_m} are calculated for this trial and after that we move on to the next trial. 
-
-The sensor readings are provided in form of dictionary to driving agent from the client, which can be easily accessed in the code. We insert a code block in between reading data from server and sending it to driving agent. This code block changes the reading of the sensor under study based on the fault that we are testing.
-
-We use the following metrics to quantify the resilience of ADS which are inline with previous work in this domain~\cite{avfi}.
-\setcounter{subsubsection}{0}
-
-\medskip
-\subsubsection{Success percentage} This metric represents the fraction of total trials in which the ADS was successful in achieving the specified target when faults are injected.
-
-\smallskip
-
-\subsubsection{Violations per trial} This metric captures the traffic violations that occur during each trial. The violations that we consider for calculating this metric are lane violation and curb violations (reasons for not considering collisions with dynamic objects are explained in \ref{ri-carla}). 
-
-The two metrics used, provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behaviour, which may not lead to outright failure but violate safety properties. 
-
-% Moved from the other section here
-
-%\subsection{Fault Injection method} \label{method}
+ %\subsubsection{Server} It controls the parameters of the simulation and also controls the actions of the AV based on predefined algorithms. 
+ 
+ \begin{figure}  [h]
+ 	\vspace{-0.5em}
+ 	\centering
+ 	\includegraphics[scale=0.4]{CARLA_block}
+ 	\vspace{-0.5em}
+ 	\caption{High level architecture of CARLA, Server sends sensor data to the client which integrates with driving agent and returns driving commands to server.}
+ 	\label{fig:carla_arch}
+ 	\vspace{-1.5em}
+ \end{figure}
+ 
+ \bigskip
+ 
+ %Due to this client-server architecture CARLA provides flexibility to swap multiple driving algorithms (called driving agents in CARLA terminology) and driving environments easily. The server provides the ability to render a range of environments by changing the weather, number of vehicles and pedestrians etc in the simulation environment. The server also provides the output of various sensors attached to AV to the driving agent. The client connects to the server using sockets and provides two type of inputs, commands and meta-commands, to the server. Commands control the behavior of the vehicles i.e braking, steering, accelerating etc. and are provided by the driving agent which is integrated with client side in CARLA using python APIs. Meta-commands are used to control the behavior of simulation.
+ 
+ Although CARLA provides ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors produce successful results for more than ninety percent of trials.
+ 
+ \medskip
+ 
+ \subsubsection{Driving Agent}
+ As mentioned in the previous section the behavior of the vehicle in the simulation is controlled by the driving agent. Our goal is to study the resilience of ADS in CARLA, so we have chosen a driving agent developed by Codevilla et al.~\cite{Codevilla2018}, which uses conditional imitation learning to train a recurrent deep neural network. This network is used in simulation for selecting appropriate action based on sensor. Dosovitskiy et al.~\cite{Dosovitskiy17} tested multiple driving agents and have shown that success rate of imitation learning based driving agent is highest(~90\%).
+ 
+ \medskip
+ %The fault space for even one sensor using approach mentioned above is quite big, which may lead to state space explosion. We intend to use this approach as a stepping stone towards finding a systematic approach for FI.  
+ 
+ \subsubsection{Environment Setup}
+ \setcounter{subsubsection}{0}
+ In our study we focus on the sensor faults, so to avoid skewing of results due to any machine learning error we select a subset of paths for fault injections, in which the ADS encounters no machine learning errors and is always able to complete the predefined goal without any traffic violations in all weather conditions.  
+ \medskip
+ \begin{itemize}
+ 	\item \textbf{Path:} Length of the paths selected for our experiments ranges from 70 to 100 meters and contains one turn between the starting and the ending position. 
+ 	
+ 	\smallskip
+ 	
+ 	\item \textbf{Environment:} No dynamic objects (i.e. NPC vehicles, pedestrians etc.) are present in the simulation environment and six predefined weather conditions provided by CARLA are used for each path. 
+ \end{itemize}
+ 
+ \subsection{Fault Injection} \label{fi_m}
+ 
+ In our study with random Fault injection we study each fault separately, so for a set of related experiments we only inject one type of fault. A single fault is injected, according to the fault model, in each execution run and its effect on the overall system is observed. The objective and path to navigate is constant in each trial so that its outcome can be compared with output of a golden run, in which no fault was injected. 
+ 
+ %\textcolor{red}{We need a text block about how we represent different faults and justify it, from literature review}
+ The output of optical sensor in attached to ADS used for experiments, is a three dimensional array of size 600 x 800 x 3, which represents an RGB image of size 600 x 800. The value for each pixel ranges from 0 to 255 for all channels. The fault in the camera sensor can be simulated by altering the captured image. For example, partial occlusion fault in the experiments is simulated by selecting a random portion of the image of size 100 x 200 and setting the value of all the pixels in this portion to 0. Figure~\ref{fig:partial_occlusion} shows the effect of partial occlusion on the sensor data. Details about effect of other faults are mentioned in Appendix~\ref{Appendix:A}.
+ 
+ \begin{figure}[h]
+ 	\vspace{-0.5em}
+ 	\centering
+ 	\begin{subfigure}[b]{0.23\textwidth}
+ 		\includegraphics[scale=0.15]{pure_data}
+ 		\caption{Sensor output}
+ 		\label{fig:fs_example}
+ 	\end{subfigure}
+ 	~ 
+ 	\begin{subfigure}[b]{0.23\textwidth}
+ 		\includegraphics[scale=0.15]{faulty_data}
+ 		\caption{Sensor output after FI}
+ 		\label{fig:fc_example}
+ 	\end{subfigure}
+ 	
+ 	%\vspace{-1em}
+ 	\caption{Effect of partial occlusion fault}
+ 	\label{fig:partial_occlusion}
+ 	\vspace{1.5em}
+ \end{figure}
+ 
+ As mentioned in~\ref{ri-carla} CARLA provides a client server architecture. We exploit this boundary between client and server for our fault injection experiments. Figure~\ref{fig:FI_method} provides an overview of FI method used in one trial. CARLA platform provides an ability to run multiple trials of the same experiments (same environment and goals). Each trial involves multiple steps. In each step, data is read from the sensors, which is provided to the driving agent, which based on some predefined algorithm, gives command to the AV, after the command, it is checked if the objective of the trial is achieved or a timeout has happened. If any of these condition exists, we end the current trial and the using the measurements from the server, the metrics defined in~\ref{fi_m} are calculated for this trial.
+ 
+ \begin{figure}  
+ 	\vspace{-0.5em}
+ 	\centering
+ 	\includegraphics[scale=0.3]{FI_method}
+ 	\vspace{-0.5em}
+ 	\caption{Life cycle of an experiment trial on client side, Fault is injected by altering sensor readings received by client.}
+ 	\label{fig:FI_method}
+ 	\vspace{-1.5em}
+ \end{figure}
+ 
+ The sensor readings are provided in form of dictionary to driving agent from the client, which can be easily accessed in the code. We insert a code block in between reading data from server and sending it to driving agent. This code block changes the reading of the sensor under study, based on the fault under consideration.
+ 
+ We use the following metrics to quantify the resilience of ADS which are inline with previous work in this domain~\cite{avfi}.
+ \setcounter{subsubsection}{0}
+ 
+ \medskip
+ \subsubsection{Success percentage} This metric represents the fraction of total trials in which the ADS was successful in completing its objective i.e. navigate successfully from starting position to end point with in specified time.
+ 
+ \smallskip
+ 
+ \subsubsection{Success percentage without violations} This metric captures the traffic violations that occur during each trial. This is a more stricter criteria which records trials with no violations. The violations that we consider for calculating this metric are lane violation, curb violations and traffic law violations (reasons for not considering collisions with dynamic objects are explained in \ref{ri-carla}). 
+ 
+ The two metrics used, provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behavior, which may not lead to outright failure but violate safety properties.
+ 

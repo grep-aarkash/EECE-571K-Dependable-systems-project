@@ -35,5 +35,31 @@ CARLA helped us simulate the optical sensors, in order to understand the failure
 
 We try to understand if all image noises indeed cause the failure of the system. Hence we focus our experimentations in understanding image noise and occlusions.
 
+\textbf{RQ3: What subset of the above faults cause the most amount of system damage i.e system failure?}
+
+Figure~\ref{fig:success_rate} shows the success rate of exhaustive fault injection due to different type of injected faults. It can be seen that hardware faults which are represented as bit flips in do not cause any failure.
+
+\begin{figure}
+	\vspace{-0.5em}
+	\centering
+	\includegraphics[scale=0.7]{success_rate}
+	\vspace{-0.5em}
+	\caption{Percentage of trials in which ADS was able to complete specified goals in presence of faults.}
+	\label{fig:success_rate}
+	\vspace{-1.5em}
+\end{figure}
+
+\begin{figure}  
+	\vspace{1.0em}
+	\centering
+	\includegraphics[scale=0.7]{no_violations}
+	\vspace{-0.5em}
+	\caption{Percentage of trials in which ADS was able to complete specified goals, in presence of faults, without committing any traffic violations.}
+	\label{fig:no_violations}
+	\vspace{-1.5em}
+\end{figure}
+
+
+
 
 
