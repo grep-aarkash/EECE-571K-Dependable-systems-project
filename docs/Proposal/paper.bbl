@@ -58,6 +58,9 @@ Guanpeng Li, Siva Kumar~Sastry Hari, Michael Sullivan, Timothy Tsai, Karthik
 \newblock In {\em International Conference for High Performance Computing,
   Networking, Storage, and Analysis (SC), 2017}. ACM, 2017.
 
+\bibitem{cheapcamera}
+Andrew Liszewski.
+
 \bibitem{kexin17sosp}
 Kexin Pei, Yinzhi Cao, Junfeng Yang, and Suman Jana.
 \newblock {DeepXplore: Automated Whitebox Testing of Deep Learning Systems}.

@@ -4,10 +4,12 @@ In this section we present the fault model for the sensors. We further evaluate 
 	\item \textbf{RQ1}
 	What all types of faults can exist in advanced and core sensors of Autonomous vehicles such as the optical sensor.?
 	\item \textbf{RQ2}
+	What faults are more commonly observed in the optical sensors?
+	\item \textbf{RQ3}
 	What subset of the above faults cause the most amount of system damage i.e system failure?
 	\item \textbf{RQ3}
 	What is the failure rate of the faults causing the most amount of damage?
-	\item \textbf{RQ4}
+	\item \textbf{RQ5}
 	What mitigation strategies can we use for preventing those failure rates due to the particular sensor faults in Autonomous vehicles?
 \end{enumerate}
 \vskip 0.2in
@@ -15,5 +17,11 @@ We answer the above research questions.
 \vskip 0.2in
 \textbf{RQ1: What all types of faults exist in advance and core sensors in an autonomous vehicle.}
 Though there have been lot of studies which look at the individual sensors. These studies also performed an indepth analysis of the faults which can be present in a sensors such as high-powered camera \cite{5530865}, \cite{inproceedings}. However, none of the previous work categorizes the fault model into hardware faults and image faults as shown in fig. 2. We not only constructed a fault model for the high-powered sensors, but we chose the faults which are most likely to occur in case of a self driving car. The previous work by Bresolin et al. \cite{inproceedings} performs a fault diagnosis of hybrid systems. However, their fault model is limited as they only consider the hardware faults. 
+
+We chose to start our work with optical sensors because of many reasons. Due to the unstable nature of LIDARs a lot of industrial focus is being shifted towards cameras. A recent work says that soon cheap cameras would replace LIDARs\cite{cheapcamera}. Hence to visualize a 3D world a setup can be constructed using a pair of cameras. In order to do so, it becomes an absolute necessity to understand the faults which can be a part of high-powered cameras as well as low powered cameras. 
+
+As shown in Fig. 2 we consider hardware faults and the weather faults. The two major categories we consider in our system are the image noise and the occlusions. Image noise is the random variation of brightness or color information in images.
+The effects of image noises are diverse and can vary from causing minimal damage to the image to
+a level which makes it difficult to determine the subject in the image.
 
 \subsection{Hardware faults}
