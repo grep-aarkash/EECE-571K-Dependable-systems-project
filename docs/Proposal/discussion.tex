@@ -1,14 +1,9 @@
  \section{Discussion}
-In order to perform the first set of experimentation, we initially chose LIDAR. However, simulating a LIDAR sensor is difficult since, the number of states in LIDAR are not finite. It is continuously rotating and obtaining new results and hence changing states. Hence, we decided to change our initial sensor and chose a camera instead.
 
-The first fault-injection methodology though provides a good coverage incurs a lot of overhead. In order to optimize the injection process, we inject faults after every 10 frames. However, we observe that this reduces the coverage though providing us with better overhead. Hence, this becomes a question of trade-off between overhead and coverage. 
-
-After understanding the failure rates of the ADS due to sensor faults, we try to come up with certain mitigation techniques. Since, we can see that some faults tend to cause higher rates than others, we can chose to activate filters during the running of the system to mitigate the image noise. For example there can be some settings introduced which tell the camera that in case of temperature changes. Accordingly, the filters can be activated, to minimize the affects of image noises. 
-
-Moreover, if we are successfully able to mitigate all such faults in the sensors, we can lead to a high quality ADS design at a reasonable cost.
-
-
+After understanding the failure rates of the ADS due to sensor faults, we try to come up with certain mitigation techniques. Since, we can see that some faults tend to cause higher rates than others, we can choose to activate filters, during the running of the system to mitigate the image noise. For example there can be some settings integrated in system design which tells the camera that in case of temperature changes activate a predefined filter based on the environmental conditions. In this way effects of noises on behavior of ADS can be minimized. Similarly pre-processing of sensor data can be deployed on controller side after detecting environmental conditions that may result in a particular type of fault. In this way no changes have to be made in the sensor array of an already deployed autonomous driving system.
 
 \section{Future work}
-We intend to setup our test environment in a distributed environment and observe the failure rates in that context. In that case, we don't look at one car individually but we have multiple cars who are supposed to work with each other.
+Our study raises some very interesting questions that open some very interesting research avenues. A similar study for other sensor present in ADS such as LIDAR, SONAR etc can be done to individually study resilience of ADS based on sensor faults. Similarly faults in different types of camera or camera configurations can also be studied to identify most resilient camera configurations. To tackle the challenge of high overhead the experiments can be performed in a distributed environment with independent experiment episodes executing in parallel. Similar sensor based fault analysis can also be extended to other Cyber physical systems that rely on sensor data for obtaining information about environment to make critical decisions. 
 
+In the domain of machine learning for autonomous driving systems, this study provides
+an insight about how different sensor fault effect the performance of these systems, which opens a research area of integrating such faults in the training of Neural networks, used in decision making processes in ADS, so that such systems can be inherently made resilient to sensor faults.

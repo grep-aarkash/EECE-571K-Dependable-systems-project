@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,8 +568,11 @@ File: CARLA_block.jpg Graphic file (type jpg)
 <use CARLA_block.jpg>
 Package pdftex.def Info: CARLA_block.jpg  used on input line 69.
 (pdftex.def)             Requested size: 241.29723pt x 61.8299pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 88.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -605,40 +608,41 @@ Package pdftex.def Info: FI_method.jpg  used on input line 150.
 (pdftex.def)             Requested size: 161.70537pt x 162.30762pt.
 ) (./Evaluation.tex [5 <./pure_data.jpg> <./faulty_data.jpg> <./FI_method.jpg>]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 LaTeX Warning: Citation `2014arXiv1412.6572G' on page 6 undefined on input line
- 38.
+ 39.
 
 <success_rate.jpg, id=31, 352.31625pt x 204.01219pt>
 File: success_rate.jpg Graphic file (type jpg)
 <use success_rate.jpg>
-Package pdftex.def Info: success_rate.jpg  used on input line 47.
+Package pdftex.def Info: success_rate.jpg  used on input line 48.
 (pdftex.def)             Requested size: 246.61969pt x 142.80756pt.
 <no_violations.png, id=32, 352.31625pt x 207.02344pt>
 File: no_violations.png Graphic file (type png)
 <use no_violations.png>
-Package pdftex.def Info: no_violations.png  used on input line 57.
+Package pdftex.def Info: no_violations.png  used on input line 58.
 (pdftex.def)             Requested size: 246.61969pt x 144.9154pt.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 66.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+[6]
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 67.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [6]
+)
 <overhead.jpg, id=36, 331.99031pt x 88.07906pt>
 File: overhead.jpg Graphic file (type jpg)
 <use overhead.jpg>
-Package pdftex.def Info: overhead.jpg  used on input line 77.
+Package pdftex.def Info: overhead.jpg  used on input line 78.
 (pdftex.def)             Requested size: 232.39162pt x 61.6549pt.
 <map_critical.png, id=37, 263.7855pt x 160.1985pt>
 File: map_critical.png Graphic file (type png)
 <use map_critical.png>
-Package pdftex.def Info: map_critical.png  used on input line 91.
+Package pdftex.def Info: map_critical.png  used on input line 92.
 (pdftex.def)             Requested size: 184.64859pt x 112.13818pt.
 )
-(./discussion.tex [7 <./success_rate.jpg> <./no_violations.png> <./overhead.jpg
->]) (./conclusion.tex) (./paper.bbl
+(./discussion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./success_rate.jpg> <./no_violations.png> <./overhead.jpg>]) (./conclusion
+.tex)
+(./paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 74--78
 []\OT1/ptm/m/n/8 MIT Tech-nol-ogy Re-view.  One cam-era is all this self-
  []
@@ -682,7 +686,7 @@ live/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (9 pages, 419395 bytes).
+Output written on paper.pdf (9 pages, 419716 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
