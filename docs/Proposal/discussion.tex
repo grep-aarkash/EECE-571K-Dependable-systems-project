@@ -3,6 +3,10 @@ In order to perform the first set of experimentation, we initially chose LIDAR. 
 
 The first fault-injection methodology though provides a good coverage incurs a lot of overhead. In order to optimize the injection process, we inject faults after every 10 frames. However, we observe that this reduces the coverage though providing us with better overhead. Hence, this becomes a question of trade-off between overhead and coverage. 
 
+After understanding the failure rates of the ADS due to sensor faults, we try to come up with certain mitigation techniques. Since, we can see that some faults tend to cause higher rates than others, we can chose to activate filters during the running of the system to mitigate the image noise. For example there can be some settings introduced which tell the camera that in case of temperature changes. Accordingly, the filters can be activated, to minimize the affects of image noises. 
+
+Moreover, if we are successfully able to mitigate all such faults in the sensors, we can lead to a high quality ADS design at a reasonable cost.
+
 
 
 \section{Future work}

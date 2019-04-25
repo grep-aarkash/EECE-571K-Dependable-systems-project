@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: paper.aux
 The style file: plain.bst
@@ -8,48 +8,47 @@ I was expecting a `,' or a `}'---line 680 of file reference.bib
  : @ARTICLE{2014arXiv1412.6572G,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "i"
 Warning--empty booktitle in inproceedings
 Warning--empty booktitle in avfi
-You've used 12 entries,
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            682 strings with 10763 characters,
-and the built_in function-call counts, 4413 in all, are:
-= -- 402
-> -- 236
+            688 strings with 10921 characters,
+and the built_in function-call counts, 4686 in all, are:
+= -- 427
+> -- 254
 < -- 6
-+ -- 94
-- -- 82
-* -- 272
-:= -- 704
-add.period$ -- 38
-call.type$ -- 12
-change.case$ -- 77
++ -- 101
+- -- 88
+* -- 291
+:= -- 755
+add.period$ -- 41
+call.type$ -- 13
+change.case$ -- 83
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 175
-empty$ -- 364
-format.name$ -- 82
-if$ -- 963
+cite$ -- 15
+duplicate$ -- 185
+empty$ -- 381
+format.name$ -- 88
+if$ -- 1016
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 8
-newline$ -- 62
-num.names$ -- 24
-pop$ -- 121
+int.to.str$ -- 13
+missing$ -- 9
+newline$ -- 67
+num.names$ -- 26
+pop$ -- 127
 preamble$ -- 1
-purify$ -- 65
+purify$ -- 70
 quote$ -- 0
-skip$ -- 137
+skip$ -- 144
 stack$ -- 0
-substring$ -- 178
-swap$ -- 56
+substring$ -- 183
+swap$ -- 57
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 52
 warning$ -- 2
-while$ -- 35
-width$ -- 14
-write$ -- 123
+while$ -- 37
+width$ -- 15
+write$ -- 133
 (There was 1 error message)

@@ -31,6 +31,11 @@ Alexey Dosovitskiy, German Ros, Felipe Codevilla, Antonio Lopez, and Vladlen
 \newblock In {\em Proceedings of the 1st Annual Conference on Robot Learning},
   pages 1--16, 2017.
 
+\bibitem{2014arXiv1412.6572G}
+I.~J. {Goodfellow}, J.~{Shlens}, and C.~{Szegedy}.
+\newblock {Explaining and Harnessing Adversarial Examples}.
+\newblock {\em arXiv e-prints}, December 2014.
+
 \bibitem{teslasr}
 Tesla Inc.
 \newblock Vehicle safety report ({Q4}-2018).
