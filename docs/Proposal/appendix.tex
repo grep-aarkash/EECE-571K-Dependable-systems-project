@@ -1,0 +1,29 @@
+\subsection{Fault representation in CARLA} \label{Appendix:A}
+
+\medskip
+
+\subsubsection{Bit Flips} A random pixel is selected from all the channels of sensor data and one bit from that pixel is flipped to zero or one depending on its previous state.
+
+\medskip
+
+\subsubsection{Partial Occlusion} A random 100 x 200 contiguous rectangle is chosen in the sensor data and value of pixels, for all the channels in this regions, are set to 0 thus emulating the occlusion of the view captured by the image sensor. The location of rectangle to be occluded within the image, is selected at the start of episode and the selected portion of the sensor data is blacked out throughout the episode. 
+
+\medskip
+
+\subsubsection{Channel Occlusion} The value of all the pixels of the channel to be occluded, are set to 0 in the channel data thus emulating the condition where the capability of the sensor to differentiate between intensities of the channel is absent.
+
+\medskip
+
+\subsubsection{Gaussian Noise} A three dimensional array, with dimensions similar to the sensor output, is created which follows a normal distribution with mean of zero and variance of 0.1. This array is added to the original sensor data thus emulating presence of a Gaussian noise in sensor data.
+
+\medskip
+
+\subsubsection{Salt-and-pepper Noise} Random pixels are selected from all channels of the sensor output with a probability of 0.4\%. The value of half of these selected pixels is set to 0 and the value of other half is set to the maximum pixel value (255) thus emulating per channel Salt-and-pepper noise.
+
+\medskip
+
+\subsubsection{Poisson Noise} Number of unique pixels in all channels of the sensor data along with sensor data is used as an expectation interval for the Poisson distribution. The resulting samples from this Poisson distributions are replaced int he original sensor data thus emulating Poisson noise.
+
+\medskip
+
+\subsubsection{Speckle Noise} A three dimensional array, with dimensions similar to the sensor output, is created which follows standard normal distribution. Each individual pixel of this matrix is multiplied with the corresponding pixel in sensor data and the result is added to sensor data, thus emulating the multiplicative nature of speckle noise.   
