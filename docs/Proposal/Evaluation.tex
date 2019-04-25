@@ -31,7 +31,9 @@ The second types of data faults which we explore are the occlusions. Occlusion m
 
 In order to validate our results and understand we limit our experimentation model. Based on our judgment and understanding, we find experimenting with data faults more compelling as compared to hardware faults. Our reason are well-justified and we will validate them in the next set of RQs.
 
-CARLA helped us simulate the optical sensors, in order to understand the failure rates due to image noises and occlusions. We look into different types of occlusions as shows in Fig 2.
+CARLA helped us simulate the optical sensors, in order to understand the failure rates due to image noises and occlusions. We look into different types of occlusions as shows in Fig 2. We test for different noises such as Gaussian noise, salt and pepper noise, speckle noise and Poisson noise. The different types of image noises represent different types of probabilistic faults in an image. For example Gaussian noise distributes the noise uniformly across the entire image. Every image noise has a different probabilistic model. Hence, according to Goodfellow et al. \cite{2014arXiv1412.6572G} we can see that sometimes introducing noise can fool the neural network by giving better results than before. 
+
+We try to understand if all image noises indeed cause the failure of the system. Hence we focus our experimentations in understanding image noise and occlusions.
 
 
 

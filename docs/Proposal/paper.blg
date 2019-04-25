@@ -3,42 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: paper.aux
 The style file: plain.bst
 Database file #1: reference.bib
-Illegal end of database file---line 678 of file reference.bib
- : }
- :  
+I was expecting a `,' or a `}'---line 680 of file reference.bib
+ : 
+ : @ARTICLE{2014arXiv1412.6572G,
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "i"
 Warning--empty booktitle in inproceedings
 Warning--empty booktitle in avfi
 You've used 12 entries,
             2118 wiz_defined-function locations,
-            681 strings with 10575 characters,
-and the built_in function-call counts, 4401 in all, are:
-= -- 399
+            682 strings with 10763 characters,
+and the built_in function-call counts, 4413 in all, are:
+= -- 402
 > -- 236
 < -- 6
 + -- 94
 - -- 82
 * -- 272
-:= -- 701
-add.period$ -- 37
+:= -- 704
+add.period$ -- 38
 call.type$ -- 12
-change.case$ -- 76
+change.case$ -- 77
 chr.to.int$ -- 0
 cite$ -- 14
 duplicate$ -- 175
 empty$ -- 364
 format.name$ -- 82
-if$ -- 960
+if$ -- 963
 int.to.chr$ -- 0
 int.to.str$ -- 12
 missing$ -- 8
-newline$ -- 61
+newline$ -- 62
 num.names$ -- 24
 pop$ -- 121
 preamble$ -- 1
 purify$ -- 65
 quote$ -- 0
-skip$ -- 139
+skip$ -- 137
 stack$ -- 0
 substring$ -- 178
 swap$ -- 56
@@ -49,5 +51,5 @@ type$ -- 48
 warning$ -- 2
 while$ -- 35
 width$ -- 14
-write$ -- 121
+write$ -- 123
 (There was 1 error message)
