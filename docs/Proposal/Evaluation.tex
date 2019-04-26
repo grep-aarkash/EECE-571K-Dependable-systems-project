@@ -4,7 +4,7 @@ In this section we present the fault model for the sensors. We further evaluate 
 	\item \textbf{RQ1}
 	What all types of faults can exist in advanced and core sensors of Autonomous vehicles such as the optical sensor.?
 	\item \textbf{RQ2}
-	What faults do we consider for the autonomous driving systems?
+	What faults do we consider for the autonomous driving systems and why?
 	\item \textbf{RQ3}
 	What subset of the above faults cause the most amount of system damage i.e system failure?
 	\item \textbf{RQ4}
@@ -36,7 +36,7 @@ The degree to which CARLA models the real world autonomous driving systems and t
 
 There are no open source driving agents currently available that use sensors other than camera so in our study the driving agent we chose also uses only camera sensors. As our focus is on faults in camera sensors, this provides us good insight into reliability of ADS due to these faults. Presence of other sensor in the system may lead to masking of these due to other sensors, which is a more realistic representation of a real world system. Studying the effect sensor faults in presence of other sensors, is the next logical step after studying the reliability of ADS due to individual sensor faults.  
 
-CARLA helped us simulate the optical sensors, in order to understand the failure rates due to image noises and occlusions. We look into different types of occlusions as shows in Fig 2. We test for different noises such as Gaussian noise, salt and pepper noise, speckle noise and Poisson noise. The different types of image noises represent different types of probabilistic faults in an image. For example Gaussian noise distributes the noise uniformly across the entire image. Every image noise has a different probabilistic model. Hence, according to Goodfellow et al.\cite{2014arXiv1412.6572G} we can see that sometimes introducing noise can fool the neural network by giving better results than before. 
+CARLA helped us simulate the optical sensors, in order to understand the failure rates due to image noises and occlusions. We look into different types of occlusions as shows in Fig 2. We test for different noises such as Gaussian noise, salt and pepper noise, speckle noise and Poisson noise. The different types of image noises represent different types of probabilistic faults in an image. For example Gaussian noise distributes the noise uniformly across the entire image. Every image noise has a different probabilistic model. Hence, according to Goodfellow et al.\cite{Goodfellow} we can see that sometimes introducing noise can fool the neural network by giving better results than before. 
 
 We try to understand if all image noises indeed cause the failure of the system. Hence we focus our experimentation in understanding image noise and occlusions.
 

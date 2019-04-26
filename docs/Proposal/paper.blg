@@ -8,49 +8,47 @@ I was expecting a `,' or a `}'---line 670 of file reference.bib
  : @inproceedings{Goodfellow,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "2014arXiv1412.6572G"
 Warning--empty booktitle in inproceedings
 Warning--empty booktitle in avfi
-You've used 13 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            692 strings with 11014 characters,
-and the built_in function-call counts, 4887 in all, are:
-= -- 448
-> -- 254
+            696 strings with 11154 characters,
+and the built_in function-call counts, 5190 in all, are:
+= -- 473
+> -- 272
 < -- 7
-+ -- 101
-- -- 88
-* -- 302
-:= -- 770
-add.period$ -- 41
-call.type$ -- 13
-change.case$ -- 83
++ -- 108
+- -- 94
+* -- 320
+:= -- 821
+add.period$ -- 44
+call.type$ -- 14
+change.case$ -- 89
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 198
-empty$ -- 405
-format.name$ -- 88
-if$ -- 1074
+cite$ -- 16
+duplicate$ -- 212
+empty$ -- 433
+format.name$ -- 94
+if$ -- 1138
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 9
-newline$ -- 67
-num.names$ -- 26
-pop$ -- 130
+int.to.str$ -- 14
+missing$ -- 10
+newline$ -- 72
+num.names$ -- 28
+pop$ -- 140
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 75
 quote$ -- 0
-skip$ -- 157
+skip$ -- 164
 stack$ -- 0
-substring$ -- 211
-swap$ -- 67
+substring$ -- 216
+swap$ -- 69
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
+type$ -- 56
 warning$ -- 2
-while$ -- 39
-width$ -- 15
-write$ -- 134
+while$ -- 41
+width$ -- 16
+write$ -- 144
 (There was 1 error message)
