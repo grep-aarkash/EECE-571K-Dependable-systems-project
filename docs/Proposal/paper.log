@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -550,7 +550,12 @@ File: Fault-modelgeneral.jpg Graphic file (type jpg)
 <use Fault-modelgeneral.jpg>
 Package pdftex.def Info: Fault-modelgeneral.jpg  used on input line 4.
 (pdftex.def)             Requested size: 361.19843pt x 136.11395pt.
- [2])
+ [2]
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 47.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+))
 (./methodology.tex
 <finalFM.png, id=14, 1478.52374pt x 594.22pt>
 File: finalFM.png Graphic file (type png)
@@ -573,7 +578,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 88.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [4 <./finalFM.png> <./CARLA_block.jpg>]
-<pure_data.jpg, id=25, 803.0pt x 602.25pt>
+<pure_data.jpg, id=24, 803.0pt x 602.25pt>
 File: pure_data.jpg Graphic file (type jpg)
 <use pure_data.jpg>
 Package pdftex.def Info: pure_data.jpg  used on input line 128.
@@ -583,7 +588,7 @@ Overfull \hbox (1.767pt too wide) in paragraph at lines 128--129
 [][] 
  []
 
-<faulty_data.jpg, id=26, 803.0pt x 602.25pt>
+<faulty_data.jpg, id=25, 803.0pt x 602.25pt>
 File: faulty_data.jpg Graphic file (type jpg)
 <use faulty_data.jpg>
 Package pdftex.def Info: faulty_data.jpg  used on input line 134.
@@ -593,48 +598,36 @@ Overfull \hbox (1.767pt too wide) in paragraph at lines 134--135
 [][] 
  []
 
-<FI_method.jpg, id=27, 539.01375pt x 541.02126pt>
+<FI_method.jpg, id=26, 539.01375pt x 541.02126pt>
 File: FI_method.jpg Graphic file (type jpg)
 <use FI_method.jpg>
 Package pdftex.def Info: FI_method.jpg  used on input line 150.
 (pdftex.def)             Requested size: 161.70537pt x 162.30762pt.
 ) (./Evaluation.tex [5 <./pure_data.jpg> <./faulty_data.jpg> <./FI_method.jpg>]
-
-Underfull \vbox (badness 7397) has occurred while \output is active []
-
-<success_rate.jpg, id=31, 352.31625pt x 204.01219pt>
+[6]
+<success_rate.jpg, id=34, 352.31625pt x 204.01219pt>
 File: success_rate.jpg Graphic file (type jpg)
 <use success_rate.jpg>
 Package pdftex.def Info: success_rate.jpg  used on input line 48.
 (pdftex.def)             Requested size: 246.61969pt x 142.80756pt.
-<no_violations.png, id=32, 352.31625pt x 207.02344pt>
+<no_violations.png, id=35, 352.31625pt x 207.02344pt>
 File: no_violations.png Graphic file (type png)
 <use no_violations.png>
 Package pdftex.def Info: no_violations.png  used on input line 58.
 (pdftex.def)             Requested size: 246.61969pt x 144.9154pt.
- [6]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 67.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
 <overhead.jpg, id=36, 331.99031pt x 88.07906pt>
 File: overhead.jpg Graphic file (type jpg)
 <use overhead.jpg>
 Package pdftex.def Info: overhead.jpg  used on input line 78.
 (pdftex.def)             Requested size: 232.39162pt x 61.6549pt.
-<map_critical.png, id=37, 263.7855pt x 160.1985pt>
+ [7 <./success_rate.jpg> <./no_violations.png> <./overhead.jpg>]
+<map_critical.png, id=42, 263.7855pt x 160.1985pt>
 File: map_critical.png Graphic file (type png)
 <use map_critical.png>
 Package pdftex.def Info: map_critical.png  used on input line 92.
 (pdftex.def)             Requested size: 184.64859pt x 112.13818pt.
 )
-(./discussion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./success_rate.jpg> <./no_violations.png> <./overhead.jpg>]) (./conclusion
-.tex)
-(./paper.bbl
+(./discussion.tex) (./conclusion.tex) (./paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 79--83
 []\OT1/ptm/m/n/8 MIT Tech-nol-ogy Re-view.  One cam-era is all this self-
  []
@@ -661,10 +654,10 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 5719 strings out of 492649
- 87004 string characters out of 6129622
+ 5720 strings out of 492649
+ 87018 string characters out of 6129622
  161603 words of memory out of 5000000
- 9476 multiletter control sequences out of 15000+600000
+ 9477 multiletter control sequences out of 15000+600000
  43084 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,40p,1647b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -674,7 +667,7 @@ c}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 l/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (9 pages, 419992 bytes).
+Output written on paper.pdf (9 pages, 420668 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
