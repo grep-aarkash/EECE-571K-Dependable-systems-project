@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 APR 2019 19:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.13)  26 APR 2019 04:02
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**paper.tex
-(./paper.tex
-LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(./IEEEtran.cls
+**./paper.tex
+(paper.tex
+LaTeX2e <2018-12-01>
+(IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -19,7 +16,9 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pt
+m.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -108,53 +107,61 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEquantizeheightC=\dimen122
 \@IEEEquantizeprevdepth=\dimen123
 \@IEEEquantizemultiple=\count93
-\@IEEEquantizeboxA=\box26
+\@IEEEquantizeboxA=\box27
 \@IEEEtmpitemindent=\dimen124
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count94
-\@IEEEtranrubishbin=\box27
+\@IEEEtranrubishbin=\box28
 )
 ** ATTENTION: Overriding command lockouts (line 2).
-(/usr/local/texlive/2018/texmf-dist/tex/latex/cite/cite.sty
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cite\cite.st
+y"
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsm
+ath.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amst
+ext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsg
+en.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen126
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsb
+sy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen127
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amso
+pn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count95
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 223.
 \uproot@=\count96
 \leftroot@=\count97
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 385.
 \classnum@=\count98
 \DOTSCASE@=\count99
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
 \big@size=\dimen128
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \macc@depth=\count100
 \c@MaxMatrixCols=\count101
 \dotsspace@=\muskip10
@@ -175,26 +182,31 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip45
 \multlinetaggap=\skip46
 \mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ams
+symb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ams
+fonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/algorithms/algorithmic.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\a
+lgorithmic.sty"
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.
+sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\key
+val.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
@@ -205,28 +217,34 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \ALC@tlm=\skip47
 \algorithmicindent=\skip48
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\gra
+phicx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\gra
+phics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\tri
+g.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg
+\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def
+\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcom
+p.sty"
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -240,13 +258,15 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.def
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.
+def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.dfu
-File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.
+dfu"
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00A4 (decimal 164)
@@ -382,10 +402,12 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolo
+r.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg
+\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -399,22 +421,56 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty
-Package: parskip 2001/04/09 non-zero parskip adjustments
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/parskip\pars
+kip.sty"
+Package: parskip 2019-01-16 v2.0c non-zero parskip adjustments
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvo
+ptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\l
+txcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\k
+vsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\i
+nfwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\e
+texcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\i
+fluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\eto
+olbox.sty"
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count111
+))
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subc
+aption.sty"
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\capt
+ion.sty"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\capt
+ion3.sty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen137
 \captionmargin@=\dimen138
 \captionwidth=\dimen139
@@ -441,11 +497,12 @@ ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
 ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
 \else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
 \fi .
-\c@ContinuedFloat=\count111
+\c@caption@flags=\count112
+\c@ContinuedFloat=\count113
 )
-\c@subfigure=\count112
-\c@subtable=\count113
-) (./paper.aux)
+\c@subfigure=\count114
+\c@subtable=\count115
+) (paper.aux)
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -462,64 +519,50 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.
+fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 19.
 
 -- Lines per column: 56 (exact).
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-
+pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
+\scratchcounter=\count116
 \scratchdimen=\dimen144
-\scratchbox=\box30
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\scratchbox=\box31
+\nofMPsegments=\count117
+\nofMParguments=\count118
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count117
+\MPscratchCnt=\count119
 \MPscratchDim=\dimen145
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks22
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+)
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\eps
+topdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grf
+ext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\k
+vdefinekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+))
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\p
+dftexcmds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\i
+fpdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -532,102 +575,106 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ (abstract.tex) (intro.tex) (related-work.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(./abstract.tex) (./intro.tex) (./related-work.tex [1{/usr/local/texlive/2018/t
-exmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{C:/Users/AbdulRehman/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-]) (./Background.tex
-<Fault-modelgeneral.jpg, id=10, 684.5575pt x 257.96375pt>
+])
+(Background.tex
+<Fault-modelgeneral.jpg, id=9, 684.5575pt x 257.96375pt>
 File: Fault-modelgeneral.jpg Graphic file (type jpg)
 <use Fault-modelgeneral.jpg>
 Package pdftex.def Info: Fault-modelgeneral.jpg  used on input line 4.
 (pdftex.def)             Requested size: 361.19843pt x 136.11395pt.
  [2]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 47.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 48.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1pt
+m.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-))
-(./methodology.tex
-<finalFM.png, id=14, 1478.52374pt x 594.22pt>
+)) (methodology.tex
+<finalFM.png, id=13, 1478.52374pt x 594.22pt>
 File: finalFM.png Graphic file (type png)
 <use finalFM.png>
 Package pdftex.def Info: finalFM.png  used on input line 23.
 (pdftex.def)             Requested size: 361.19843pt x 145.16356pt.
  [3 <./Fault-modelgeneral.jpg>]
-<CARLA_block.jpg, id=19, 603.25375pt x 154.5775pt>
+<CARLA_block.jpg, id=18, 603.25375pt x 154.5775pt>
 File: CARLA_block.jpg Graphic file (type jpg)
 <use CARLA_block.jpg>
 Package pdftex.def Info: CARLA_block.jpg  used on input line 69.
 (pdftex.def)             Requested size: 241.29723pt x 61.8299pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
+
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ums
+a.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 88.
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Users\AbdulRehman\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ums
+b.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [4 <./finalFM.png> <./CARLA_block.jpg>]
 <pure_data.jpg, id=24, 803.0pt x 602.25pt>
 File: pure_data.jpg Graphic file (type jpg)
 <use pure_data.jpg>
-Package pdftex.def Info: pure_data.jpg  used on input line 128.
+Package pdftex.def Info: pure_data.jpg  used on input line 125.
 (pdftex.def)             Requested size: 120.4448pt x 90.33359pt.
 
-Overfull \hbox (1.767pt too wide) in paragraph at lines 128--129
+Overfull \hbox (1.767pt too wide) in paragraph at lines 125--126
 [][] 
  []
 
 <faulty_data.jpg, id=25, 803.0pt x 602.25pt>
 File: faulty_data.jpg Graphic file (type jpg)
 <use faulty_data.jpg>
-Package pdftex.def Info: faulty_data.jpg  used on input line 134.
+Package pdftex.def Info: faulty_data.jpg  used on input line 131.
 (pdftex.def)             Requested size: 120.4448pt x 90.33359pt.
 
-Overfull \hbox (1.767pt too wide) in paragraph at lines 134--135
+Overfull \hbox (1.767pt too wide) in paragraph at lines 131--132
 [][] 
  []
 
 <FI_method.jpg, id=26, 539.01375pt x 541.02126pt>
 File: FI_method.jpg Graphic file (type jpg)
 <use FI_method.jpg>
-Package pdftex.def Info: FI_method.jpg  used on input line 150.
+Package pdftex.def Info: FI_method.jpg  used on input line 147.
 (pdftex.def)             Requested size: 161.70537pt x 162.30762pt.
-) (./Evaluation.tex [5 <./pure_data.jpg> <./faulty_data.jpg> <./FI_method.jpg>]
-[6]
-<success_rate.jpg, id=34, 352.31625pt x 204.01219pt>
+) (Evaluation.tex [5 <./pure_data.jpg> <./faulty_data.jpg> <./FI_method.jpg>]
+<success_rate.jpg, id=30, 352.31625pt x 204.01219pt>
 File: success_rate.jpg Graphic file (type jpg)
 <use success_rate.jpg>
 Package pdftex.def Info: success_rate.jpg  used on input line 48.
 (pdftex.def)             Requested size: 246.61969pt x 142.80756pt.
-<no_violations.png, id=35, 352.31625pt x 207.02344pt>
+<no_violations.png, id=31, 352.31625pt x 207.02344pt>
 File: no_violations.png Graphic file (type png)
 <use no_violations.png>
 Package pdftex.def Info: no_violations.png  used on input line 58.
 (pdftex.def)             Requested size: 246.61969pt x 144.9154pt.
-<overhead.jpg, id=36, 331.99031pt x 88.07906pt>
+
+[6 <./success_rate.jpg>]
+<overhead.jpg, id=35, 331.99031pt x 88.07906pt>
 File: overhead.jpg Graphic file (type jpg)
 <use overhead.jpg>
 Package pdftex.def Info: overhead.jpg  used on input line 78.
 (pdftex.def)             Requested size: 232.39162pt x 61.6549pt.
- [7 <./success_rate.jpg> <./no_violations.png> <./overhead.jpg>]
-<map_critical.png, id=42, 263.7855pt x 160.1985pt>
+<map_critical.png, id=36, 263.7855pt x 160.1985pt>
 File: map_critical.png Graphic file (type png)
 <use map_critical.png>
 Package pdftex.def Info: map_critical.png  used on input line 92.
 (pdftex.def)             Requested size: 184.64859pt x 112.13818pt.
-)
-(./discussion.tex) (./conclusion.tex) (./paper.bbl
+) (discussion.tex [7 <./no_violations.png> <./overhead.jpg>]) (conclusion.tex) 
+(paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 79--83
 []\OT1/ptm/m/n/8 MIT Tech-nol-ogy Re-view.  One cam-era is all this self-
  []
@@ -638,7 +685,7 @@ Underfull \hbox (badness 6047) in paragraph at lines 79--83
 s / 539841 /
  []
 
-) (./appendix.tex [8 <./map_critical.png>])
+) (appendix.tex [8 <./map_critical.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -652,25 +699,26 @@ Before submitting the final camera ready copy, remember to:
 
 [9
 
-] (./paper.aux) ) 
+] (paper.aux) ) 
 Here is how much of TeX's memory you used:
- 5722 strings out of 492649
- 87040 string characters out of 6129622
- 161603 words of memory out of 5000000
- 9478 multiletter control sequences out of 15000+600000
- 43417 words of font info for 89 fonts, out of 8000000 for 9000
+ 6082 strings out of 492946
+ 94124 string characters out of 3123602
+ 171172 words of memory out of 3000000
+ 9850 multiletter control sequences out of 15000+200000
+ 43417 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,40p,1647b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.en
-c}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (9 pages, 420838 bytes).
+ 42i,9n,40p,1649b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/AbdulRehman/AppData/Local/Programs/MiKTeX 2.9/fonts/en
+c/dvips/base/8r.enc}<C:/Users/AbdulRehman/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/AbdulRehman/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/AbdulRehman/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/AbdulRehma
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/
+AbdulRehman/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on paper.pdf (9 pages, 427126 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

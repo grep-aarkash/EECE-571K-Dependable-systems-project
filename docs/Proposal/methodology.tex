@@ -58,7 +58,7 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
  \subsubsection{Data Faults} These faults refers to the conditions in which the sensors give readings which are not correct representation of the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the environments that are used in decision making process by the ADS.. For example, A camera mapping its surroundings can be effected by rainy weather or intense monochromatic lights, which may lead to addition of noise in the image captured by the camera sensor.
  
  \subsection{CARLA} \label{ri-carla}
- CARLA is an open source simulator which simulates a dynamic world and provides a simple interface between environment and autonomous vehicles (AV). The simulation engine simulates a vehicle in a city environment with realistic physics. Measurements representing the environment are provided to a driving agent (DA) which  controls the actions that the AV takes based on these measurements and some predefined algorithm. Figure~\ref{fig:carla_arch} shows the high level architecture of CARLA. CARLA operates in a server-client model in which server handles the simulations, while client controls the actions of the AV(through DA) as well as simulation parameters of the overall system. 
+ CARLA is an open source simulator which simulates a dynamic world and provides a simple interface between environment and autonomous vehicles (AV). The simulation engine simulates a vehicle in a city environment with realistic physics. Measurements representing the environment are provided to a driving agent (DA) which  controls the actions, that the AV takes, based on these measurements and some predefined algorithms. Figure~\ref{fig:carla_arch} shows the high level architecture of CARLA. CARLA operates in a server-client model in which server handles the simulations, while client controls the actions of the AV(through DA) as well as simulation parameters of the overall system. 
  %\subsubsection{Client} It runs the simulation and renders the environment that the AV experiences.
  
  %\subsubsection{Server} It controls the parameters of the simulation and also controls the actions of the AV based on predefined algorithms. 
@@ -73,18 +73,15 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
  	\vspace{-1.5em}
  \end{figure}
  
- \bigskip
- 
  %Due to this client-server architecture CARLA provides flexibility to swap multiple driving algorithms (called driving agents in CARLA terminology) and driving environments easily. The server provides the ability to render a range of environments by changing the weather, number of vehicles and pedestrians etc in the simulation environment. The server also provides the output of various sensors attached to AV to the driving agent. The client connects to the server using sockets and provides two type of inputs, commands and meta-commands, to the server. Commands control the behavior of the vehicles i.e braking, steering, accelerating etc. and are provided by the driving agent which is integrated with client side in CARLA using python APIs. Meta-commands are used to control the behavior of simulation.
  
- Although CARLA provides ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors produce successful results for more than ninety percent of trials.
- 
- \medskip
+ Although CARLA provides ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors produce successful results for more than ninety percent of trials. So on the basis of this study we use following parameters in our experiments.
  
  \subsubsection{Driving Agent}
  As mentioned in the previous section the behavior of the vehicle in the simulation is controlled by the driving agent. Our goal is to study the resilience of ADS in CARLA, so we have chosen a driving agent developed by Codevilla et al.~\cite{Codevilla2018}, which uses conditional imitation learning to train a recurrent deep neural network. This network is used in simulation for selecting appropriate action based on sensor. Dosovitskiy et al.~\cite{Dosovitskiy17} tested multiple driving agents and have shown that success rate of imitation learning based driving agent is highest(~90\%). Table~\ref{table:1} shows the results of this study for our testing conditions.
  
 \begin{table}
+	\vspace{1.0em}
 	\begin{tabular}{| c | c | c | c |}
 		\hline
 		Drving agent & Training env. & Testing env. & Average  \\
@@ -96,16 +93,16 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
  	\end{tabular}
  \caption{Percentage of successful episode for different driving agents~\cite{Dosovitskiy17}.}
  \label{table:1}
+ \vspace{-2.0em}
 \end{table}
 
- \medskip
-
  %The fault space for even one sensor using approach mentioned above is quite big, which may lead to state space explosion. We intend to use this approach as a stepping stone towards finding a systematic approach for FI.  
- 
+  \smallskip
+  
  \subsubsection{Environment Setup}
  \setcounter{subsubsection}{0}
- In our study we focus on the sensor faults, so to avoid skewing of results due to any machine learning error we select a subset of paths for fault injections, in which the ADS encounters no machine learning errors and is always able to complete the predefined goal without any traffic violations in all weather conditions.  
- \medskip
+ In our study we focus on the sensor faults, so to avoid skewing of results due to any machine learning error we select a subset of paths for fault injections, in which the ADS encounters no machine learning errors and is always able to complete the predefined goal without any traffic violations in all weather conditions.
+ 
  \begin{itemize}
  	\item \textbf{Path:} Length of the paths selected for our experiments ranges from 70 to 100 meters and contains one turn between the starting and the ending position. 
  	
