@@ -28,37 +28,34 @@
 
 
 % Our contribution
-Our contribution is two-fold in this work. First, by an in depth understanding of autonomous vehicles, we device a fault model for the vehicle in general. We specifically focus on the sensor faults and design a fault-model specific to the sensors. Second, based on our fault model, we inject faults in order to obtain the failure rate of the system caused due to the sensor faults. We attempt fault injection in order to get maximum coverage of the system in an optimal manner.
+Our contribution is two-fold in this work. First, by an in-depth understanding of autonomous vehicles, we devise a fault model for the vehicle in general. We specifically focus on the sensor faults and design a fault-model specific to the sensors. Second, based on our fault model, we inject faults in order to obtain the failure rate of the system, due to a different type of sensor faults.
 
 \subsection{Fault-model for ADS}
 % general categorization of the fault-model
 Analyzing the system, we designed a fault model for autonomous driving systems. We categorized the fault occurrence in two ways: due to some physical damage or due to network issues. These two categories of faults cover almost all possible components of the systems which can lead to a failure of the system. 
 
-%\\TODO- components of the LIDAR.
-
-
-
-
-
 %why do we define the fault-model of the entire system
-In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. However, covering the failures caused by each component is out of scope of our current paper. Also, analysing failure rates in general instead of component wise failure rates does not provide us with useful set of results. Hence we introduce a fault-model for the sensors of an ADS. 
+In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. However, covering the failures caused by each component is out of the scope of our current project. Also, analyzing failure rates in general instead of component-wise failure rates does not provide us with a useful set of results. Hence we introduce a fault-model for the sensors of an ADS. 
 
 %Core Components we selected for faults in ADS
- The core component we selected were the  sensors used in ADS. The sensors are one of the most expensive parts of an ADS. Hence, determining the failure rates due to these sensors can help us in minimizing damage. We described different categories of sensors in Section-3. We start with an analysis of one of the sensors described above.
+ The core component we selected were the  sensors used in ADS. The sensors are one of the most expensive parts of an ADS. Hence, determining the failure rates due to these sensors can help us in minimizing damage. We described different categories of sensors in~\ref{background}. We focus on on camera sensor in next part of our study.
  
  \subsection{Fault-model of Camera}
  %A little more about Camera
- Camera is a very expensive sensor and hence finding the failure rates of the system, caused due to camera can help the designers understand how to mitigate the faults such that they don't lead to failures. ADS being safety critical systems, can cause a lot of harm ( death in the worst case scenario ) in case of a failure. 
+Camera is a very expensive sensor and hence finding the failure rates of the system, caused due to the camera can help the designers understand how to mitigate the faults such that they don't lead to failures.
  
- \subsubsection{Hardware faults} These faults represent the soft errors that can occur in the data, that is recorded by the sensors. These faults can occur in the registers of sensor units or in communication links between sensor and controller. These faults can also occur within registers, where these values are stored in the main ADS controller. In our study we  assume that the fault is always activated regardless of where the fault actually occurred. This manifests in the form of sensor data being altered before it is used by controller to make decisions. These type of faults in real life can introduce single bit-flips which is modeled by our fault model. 
+ \subsubsection{Hardware faults} 
+These faults represent the soft errors that can occur in the data, that is recorded by the sensors. These faults can occur in the registers of sensor units or in communication links between sensor and controller. These faults can also occur within registers, where these values are stored in the main ADS controller. In our study, we assume that the fault is always activated regardless of where the fault actually occurred. This manifests in the form of sensor data being altered before it is used by the controller to make decisions. These type of faults in real life can introduce single bit-flips which is modeled by our fault model. 
 
  %introduce the notion of 
- We created two categories of faults under this section. The first is due to the alpha-rays which causes random bit flips. The other set of faults which can occur is due to wear and tear of the sensor. Sometimes, buying cheaper sensors can lead to a faster wearing away of sensors. 
+We created two categories of faults under this section. The first is due to the alpha-rays which causes random bit flips. The other set of faults which can occur is due to wear and tear of the sensor. Sometimes, buying cheaper sensors can lead to faster wearing of sensors.
+
  \medskip
- \subsubsection{Data Faults} These faults refers to the conditions in which the sensors give readings which are not correct representation of the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to weather and other characteristics of the environments that are used in decision making process by the ADS.. For example, A camera mapping its surroundings can be effected by rainy weather or intense monochromatic lights, which may lead to addition of noise in the image captured by the camera sensor.
+\subsubsection{Data Faults} 
+These faults refer to the conditions in which the sensors give readings which are not a correct representation of the environment. These faults can occur due to manufacturing defects in the sensors and various environmental conditions. Environmental conditions can refer to the weather and other characteristics of the environments that are used in the decision-making process by the ADS. For example, A camera mapping its surroundings can be affected by rainy weather or intense monochromatic lights, which may lead to the addition of noise in the image captured by the camera sensor.
  
- \subsection{CARLA} \label{ri-carla}
- CARLA is an open source simulator which simulates a dynamic world and provides a simple interface between environment and autonomous vehicles (AV). The simulation engine simulates a vehicle in a city environment with realistic physics. Measurements representing the environment are provided to a driving agent (DA) which  controls the actions, that the AV takes, based on these measurements and some predefined algorithms. Figure~\ref{fig:carla_arch} shows the high level architecture of CARLA. CARLA operates in a server-client model in which server handles the simulations, while client controls the actions of the AV(through DA) as well as simulation parameters of the overall system. 
+\subsection{CARLA} \label{ri-carla}
+CARLA is an open source simulator which simulates a dynamic world and provides a simple interface between environment and autonomous vehicles (AV). The simulation engine simulates a vehicle in a city environment with realistic physics. Measurements representing the environment are provided to a driving agent (DA) which controls the actions, that the AV takes, based on these measurements and some predefined algorithms. Figure~\ref{fig:carla_arch} shows the high-level architecture of CARLA. CARLA operates in a server-client model in which the server handles the simulations, while the client controls the actions of the AV(through DA) as well as simulation parameters of the overall system. 
  %\subsubsection{Client} It runs the simulation and renders the environment that the AV experiences.
  
  %\subsubsection{Server} It controls the parameters of the simulation and also controls the actions of the AV based on predefined algorithms. 
@@ -75,10 +72,10 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
  
  %Due to this client-server architecture CARLA provides flexibility to swap multiple driving algorithms (called driving agents in CARLA terminology) and driving environments easily. The server provides the ability to render a range of environments by changing the weather, number of vehicles and pedestrians etc in the simulation environment. The server also provides the output of various sensors attached to AV to the driving agent. The client connects to the server using sockets and provides two type of inputs, commands and meta-commands, to the server. Commands control the behavior of the vehicles i.e braking, steering, accelerating etc. and are provided by the driving agent which is integrated with client side in CARLA using python APIs. Meta-commands are used to control the behavior of simulation.
  
- Although CARLA provides ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors produce successful results for more than ninety percent of trials. So on the basis of this study we use following parameters in our experiments.
+Although CARLA provides the ability to simulate complex environments, Dosovitskiy et al.~\cite{Dosovitskiy17} have shown that for a range of driving agents, only simple paths with no dynamic actors produce successful results for more than ninety percent of trials. So on the basis of this study, we use the following parameters in our experiments.
  
  \subsubsection{Driving Agent}
- As mentioned in the previous section the behavior of the vehicle in the simulation is controlled by the driving agent. Our goal is to study the resilience of ADS in CARLA, so we have chosen a driving agent developed by Codevilla et al.~\cite{Codevilla2018}, which uses conditional imitation learning to train a recurrent deep neural network. This network is used in simulation for selecting appropriate action based on sensor. Dosovitskiy et al.~\cite{Dosovitskiy17} tested multiple driving agents and have shown that success rate of imitation learning based driving agent is highest(~90\%). Table~\ref{table:1} shows the results of this study for our testing conditions.
+ As mentioned in the previous section the behavior of the vehicle in the simulation is controlled by the driving agent. Our goal is to study the resilience of ADS in CARLA, so we have chosen a driving agent developed by Codevilla et al.~\cite{Codevilla2018}, which uses conditional imitation learning to train a recurrent deep neural network. This network is used in the simulation for selecting appropriate action based on sensor readings. Dosovitskiy et al.~\cite{Dosovitskiy17} tested multiple driving agents and have shown that the success rate of imitation learning based driving agent is highest(~90\%). Table~\ref{table:1} shows the results of this study for our experimental conditions..
  
 \begin{table}
 	\vspace{1.0em}
@@ -101,22 +98,22 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
   
  \subsubsection{Environment Setup}
  \setcounter{subsubsection}{0}
- In our study we focus on the sensor faults, so to avoid skewing of results due to any machine learning error we select a subset of paths for fault injections, in which the ADS encounters no machine learning errors and is always able to complete the predefined goal without any traffic violations in all weather conditions.
- 
- \begin{itemize}
- 	\item \textbf{Path:} Length of the paths selected for our experiments ranges from 70 to 100 meters and contains one turn between the starting and the ending position. 
- 	
- 	\smallskip
- 	
- 	\item \textbf{Environment:} No dynamic objects (i.e. NPC vehicles, pedestrians etc.) are present in the simulation environment and six predefined weather conditions provided by CARLA are used for each path. 
- \end{itemize}
- 
+In our study we focus on the sensor faults, so to avoid skewing of results due to any machine learning errors we select a subset of paths for fault injections, in which the ADS encounters no machine learning errors and is always able to complete the predefined goal without any traffic violations in all weather conditions. Paths selected for our experiments have the following characteristics.
+
+\begin{itemize}
+	\item \textbf{Path:} Length of the paths selected for our experiments ranges from 70 to 100 meters and contains one turn between the starting and the ending position. 
+	
+	\smallskip
+	
+	\item \textbf{Environment:} No dynamic objects (i.e. NPC vehicles, pedestrians, etc.) are present in the simulation environment and six predefined weather conditions provided by CARLA are used for each path. 
+\end{itemize}
+
  \subsection{Fault Injection} \label{fi_m}
  
- In our study with random Fault injection we study each fault separately, so for a set of related experiments we only inject one type of fault. A single fault is injected, according to the fault model, in each execution run and its effect on the overall system is observed. The objective and path to navigate is constant in each trial so that its outcome can be compared with output of a golden run, in which no fault was injected. 
- 
- %\textcolor{red}{We need a text block about how we represent different faults and justify it, from literature review}
- The output of optical sensor in attached to ADS used for experiments, is a three dimensional array of size 600 x 800 x 3, which represents an RGB image of size 600 x 800. The value for each pixel ranges from 0 to 255 for all channels. The fault in the camera sensor can be simulated by altering the captured image. For example, partial occlusion fault in the experiments is simulated by selecting a random portion of the image of size 100 x 200 and setting the value of all the pixels in this portion to 0. Figure~\ref{fig:partial_occlusion} shows the effect of partial occlusion on the sensor data. Details about effect of other faults are mentioned in Appendix~\ref{Appendix:A}.
+ In our study with random Fault injection, we study each fault separately, so for a set of related experiments, we only inject one type of fault. A single fault is injected, according to the fault model, in each execution run and its effect on the overall system is observed. The objective and path to navigate are constant in each trial so that its outcome can be compared with the output of a fault-free execution i.e. a golden run.
+
+%\textcolor{red}{We need a text block about how we represent different faults and justify it, from literature review}
+The output of the optical sensor attached to ADS used for experiments is a three-dimensional array of size 600 x 800 x 3, which represents an RGB image of size 600 x 800. The value for each pixel ranges from 0 to 255 for all channels. The fault in the camera sensor can be simulated by altering the captured image. For example, partial occlusion fault in the experiments is simulated by selecting a random portion of the image of size 100 x 200 and setting the value of all the pixels in this portion to 0. Figure~\ref{fig:partial_occlusion} shows the effect of partial occlusion on the sensor data. Details about the effect of other faults on sensor data are mentioned in Appendix~\ref{Appendix:A}.
  
  \begin{figure}[h]
  	\vspace{-0.5em}
@@ -139,8 +136,8 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
  	\vspace{1.5em}
  \end{figure}
  
- As mentioned in~\ref{ri-carla} CARLA provides a client server architecture. We exploit this boundary between client and server for our fault injection experiments. Figure~\ref{fig:FI_method} provides an overview of FI method used in one trial. CARLA platform provides an ability to run multiple trials of the same experiments (same environment and goals). Each trial involves multiple steps. In each step, data is read from the sensors, which is provided to the driving agent, which based on some predefined algorithm, gives command to the AV, after the command, it is checked if the objective of the trial is achieved or a timeout has happened. If any of these condition exists, we end the current trial and the using the measurements from the server, the metrics defined in~\ref{fi_m} are calculated for this trial.
- 
+As mentioned in~\ref{ri-carla} CARLA provides a client-server architecture. We exploit this boundary between client and server for our fault injection experiments. Figure~\ref{fig:FI_method} provides an overview of our FI method. CARLA platform provides an ability to run multiple trials of the same experiments (called episodes). Each trial involves multiple iterations. In each iteration, data is read from the sensors, which is provided to the driving agent, which based on some predefined algorithm, gives commands to the AV, after the command, it is checked if the objective of the trial is achieved or a timeout has happened. If any of these condition exists, we end the current trial and the using the measurements from the server, the metrics defined in~\ref{fi_m} are calculated for this trial.
+
  \begin{figure}  
  	\vspace{-0.5em}
  	\centering
@@ -151,17 +148,18 @@ In Figure~\ref{fig:fault-modelgeneral} we provide a fault-model for an ADS. Howe
  	\vspace{-1.5em}
  \end{figure}
  
- The sensor readings are provided in form of dictionary to driving agent from the client, which can be easily accessed in the code. We insert a code block in between reading data from server and sending it to driving agent. This code block changes the reading of the sensor under study, based on the fault under consideration.
- 
- We use the following metrics to quantify the resilience of ADS which are inline with previous work in this domain~\cite{avfi}.
+The sensor readings are provided in the form of a dictionary to the driving agent from the client, which can be easily accessed in the code. We insert a code block in between reading data from the server and sending it to the driving agent. This code block changes the reading of the sensor under study, based on the fault under consideration.
+
+We use the following metrics to quantify the resilience of ADS which are in line with previous work in this domain~\cite{avfi}.
+
  \setcounter{subsubsection}{0}
  
  \medskip
- \subsubsection{Success percentage} This metric represents the fraction of total trials in which the ADS was successful in completing its objective i.e. navigate successfully from starting position to end point with in specified time.
- 
- \smallskip
- 
- \subsubsection{Success percentage without violations} This metric captures the traffic violations that occur during each trial. This is a more stricter criteria which records trials with no violations. The violations that we consider for calculating this metric are lane violation, curb violations and traffic law violations (reasons for not considering collisions with dynamic objects are explained in \ref{ri-carla}). 
- 
- The two metrics used, provide and opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behavior, which may not lead to outright failure but violate safety properties.
+ \subsubsection{Success percentage} This metric represents the fraction of total trials in which the ADS was successful in completing its objective i.e. navigate successfully from starting position to the endpoint within the specified time.
+
+\smallskip
+
+\subsubsection{Success percentage without violations} This metric captures the traffic violations that occur during each trial. This is a stricter criterion which records trials with no violations. The violations that we consider for calculating this metric are lane violation, curb violations and traffic law violations (reasons for not considering collisions with dynamic objects are explained in \ref{ri-carla}). 
+
+The two metrics used, provide an opportunity to study the effects of faults on the overall functioning of AV as well as the lower level deviations from normal behavior, which may not lead to outright failure but violate safety properties.
  

@@ -5,30 +5,29 @@
 	\caption[Fault-model for ADS]{This shows a general fault model of Autonomous Driving Systems. We have kept it generic enough to be considered for different Autonomous systems. However, our work is oriented towards autonomous cars.}
 	\label{fig:fault-modelgeneral}
 \end{figure*}
-\section{Background}
+\section{Background} \label{background}
 \subsection{ Autonomous Cars}
-Self-driving autonomous cars use various autonomous technologies to provide an effortless mode of transportation. In order for autonomous cars to work effectively a proper synchronization of advanced sensors collecting data from surrounding environments and advanced algorithms processing data and the vehicle in real-time.
-
-% Main components of self-driving car
-The main components of a self-driving car are sensors ( we will talk about them in more details in the next subsection), computer processors, batteries, back-up systems ( eg. steering, braking etc.), rounded-shapes which maximizes the sensors coverage area and the interiors( designed for riding, not for driving). 
+Self-driving autonomous cars use various technologies to provide an effortless mode of transportation. In order for autonomous cars to work effectively, proper synchronization of advanced sensors collecting data from surrounding environments and advanced algorithms processing this data in real time is necessary. The main components of a self-driving car are sensors, computer processors, actuators, batteries and back-up systems.
 
 \subsection{Sensors}
-Sensors are the core components in a self-driving car. We will talk about them in a little more detail, since our research goal is to find error rate in self-driving cars caused by sensor faults.The core sensors of a self-driving car are as follows:
+Sensors are the core components in a self-driving car. We will talk about them in a little more detail since our research goal is to find error rate in self-driving cars caused by sensor faults. The core sensors of a self-driving car are as follows:
 
 \smallskip
 %Major sensors
 \subsubsection{Radar sensors}
-Radar sensors help the autonomous vehicles in determining the road dynamics such as detours, collisions, navigation by sending signals to the on-board processor. The on-board processor on receiving the signals from the radar sensors takes decisions such as applying brakes and/or move out of the way. The decisions made by the processor or the brain of the vehicle don't depend entirely on the radar sensors. The processor decision also depends on the gyroscopes and  wheel encoders to send accurate and on time signals to it. The radar sensors are usually mounted on the bumper (two in the front and two in the back).
+Radar sensors help autonomous vehicles in determining road dynamics such as detours, collisions and obstacles. Radar uses radio waves to determine the range, angle, or velocity of other objects present in the environment. Radar sensors are usually mounted on the bumper (two in the front and two in the back).
 
 \smallskip
 \subsubsection{Optics}
-High powered cameras in conjunction with Radar sensors are another vital component of the autonomous vehicles. The camera setup on each car differs according to the manufacturer. The main goal of the camera placement is to get the surrounding views covered properly, so that the processor can take correct decisions. Some manufacturers use a single camera on the windshield ~\cite{singlecamera} whereas some vehicles require multiple cameras placed equidistant from each other to get overlapped views which are sent to the processor. The processor uses the views to calculate the depth of the field and/or perform semantic segmentation.
+High powered cameras in conjunction with Radar sensors are another vital component of the autonomous vehicles. The camera setup on each car differs according to the manufacturer. The main goal of the camera placement is to get the surrounding views covered properly so that the processor can take correct decisions. Some manufacturers use a single camera on the windshield ~\cite{singlecamera} whereas some vehicles require multiple cameras placed equidistant from each other to get overlapped views. The processor can use the views to calculate the depth of the field and perform semantic segmentation of the captured images.
+
 \smallskip
 \subsubsection{GPS}
-Global Positioning Sensors is very similar to the navigation maps we use in our mobile phones. However, GPS in autonomous vehicles is very important since we enter the destination point and the start point of our trip. The GPS works in conjunction with LIDAR, Radar Sensors and Deep learning software ~\cite{GPS} in order to guide the vehicle in the correct direction to reach the destination.
+Global Positioning System sensor is very similar to the sensors we use for navigation maps on our mobile phones. However, GPS in autonomous vehicles is very important since we enter the destination point and the start point of our trip. The GPS works in conjunction with other sensors and Deep learning software ~\cite{GPS} in order to guide the vehicle in the correct direction to reach the destination.
+
 \smallskip
 \subsubsection{LIDAR}
-Laser Illuminating Detection and Ranging is the sensor on which we are focusing on in this work. LIDAR unit resembles a spinning siren light and ranges up-to 100 meters. The goal of LIDAR is to provide driver-less cars with accurate long range detection. LIDAR continuously performs 360 degree rotation in order to scan the world around. The sensor generates raw information about the world and the information is sent to the processor which digs out the relevant information in order to guide the vehicle and take decisions.
+Laser Illuminating Detection and Ranging (LIDAR) is used for creating 3D maps of the environment of an ADS. LIDAR unit resembles a spinning siren light and has a range of up to 100 meters. The goal of LIDAR is to provide driver-less cars with accurate long-range detection. LIDAR continuously performs 360-degree rotations in order to scan its surroundings. The sensor generates raw information about the world and the information is sent to the processor which digs out the relevant information in order to guide the vehicle and take decisions.
 
 %\subsection{LIDAR}
 %Since we are trying to determine the failure rates of LIDAR, we give a brief overview of how LIDAR units work in an autonomous car.
@@ -43,11 +42,14 @@ Laser Illuminating Detection and Ranging is the sensor on which we are focusing 
 %\end{enumerate}
 
 \subsection{Camera}
-The two most expensive sensors in an ADS are the LIDAR and the Camera. The reason we chose Camera for our experimentation is because of the availability of test-beds in the form of CARLA. The fault-model for camera has been described in Fig. 1. There are two categories of  cameras in an Autonomous Driving   system. 	
-\subsubsection{Rear and 360° Cameras} 
-	Rear and 360° cameras support the driver with a better representation of the environment outside the vehicle. Luxury class car makers are beginning to install cameras with virtual, three-dimensional image displays.
+Cameras are one of the most important and expensive sensors in autonomous driving systems. The reason we chose Camera for our experimentation is because of the availability of test-beds in the form of CARLA. The fault-model for cameras has been described in Fig. 1. There are two categories of cameras used in Autonomous Driving systems.
 
+\smallskip
+\subsubsection{Rear and 360° Cameras} 
+Rear and 360-degree cameras support the driver with a better representation of the environment outside the vehicle. Luxury class car makers now use such cameras to provide virtual, three-dimensional images of the surroundings of the car.
+
+\smallskip
 \subsubsection{Forward-Facing Camera Systems}
-	 These camera systems are systems for medium to high ranges, such as in the area between 100 and 275 yards. These cameras use the algorithms to automatically detect objects, classify them, and determine the distance from them. For example, the cameras can identify pedestrians and cyclists, motor vehicles, side strips, bridge abutments, and road margins. The algorithms are also used to detect traffic signs and signals.
+These camera systems are used for detection in medium to high range, i.e. area between 100 and 275 yards. These cameras use the algorithms to automatically detect objects, classify them, and determine the distance from them. For example, the cameras can identify pedestrians and cyclists, motor vehicles, side strips, bridge abutments, and road margins. The algorithms are also used to detect traffic signs and signals.
 
 
